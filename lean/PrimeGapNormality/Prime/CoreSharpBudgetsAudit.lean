@@ -1,0 +1,17 @@
+import PrimeGapNormality.Prime.CoreSharpBudgets
+open PrimeGapNormality.Prime.CoreSharpBudgets
+#print weighted_moment_bound
+#print weighted_moment_bound_sharp
+#print remainder_scalar_eq
+#print remainder_fraction_le_sharp
+#print remainderBase_lt_one
+#print model_remainder_le_sharp
+#print profile_model_remainder_le_sharp
+#print eventually_actual_model_sharp_budgets
+#print axioms weighted_moment_bound
+#print axioms weighted_moment_bound_sharp
+#print axioms remainder_fraction_le_sharp
+#print axioms remainderBase_lt_one
+#print axioms model_remainder_le_sharp
+#print axioms profile_model_remainder_le_sharp
+#print axioms eventually_actual_model_sharp_budgets

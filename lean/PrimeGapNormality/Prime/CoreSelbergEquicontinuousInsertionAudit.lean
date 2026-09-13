@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CoreSelbergEquicontinuousInsertion
+
+/-! Source-level audit surface for the equicontinuous positive insertion theorem. -/
+
+#check @PrimeGapNormality.Prime.CoreSelberg.oscillation_cell_majorant
+#check @PrimeGapNormality.Prime.CoreSelberg.compact_equicontinuous_modulus
+#check @PrimeGapNormality.Prime.CoreSelbergEquicontinuousInsertion.finite_mesh_majorant
+#check @PrimeGapNormality.Prime.CoreSelbergEquicontinuousInsertion.finite_positive_insertion
+#check @PrimeGapNormality.Prime.CoreSelbergEquicontinuousInsertion.eventually_positive_insertion
+
+#print axioms PrimeGapNormality.Prime.CoreSelberg.oscillation_cell_majorant
+#print axioms PrimeGapNormality.Prime.CoreSelberg.compact_equicontinuous_modulus
+#print axioms PrimeGapNormality.Prime.CoreSelbergEquicontinuousInsertion.eventually_positive_insertion

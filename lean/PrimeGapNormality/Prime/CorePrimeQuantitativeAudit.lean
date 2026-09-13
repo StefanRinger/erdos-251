@@ -1,0 +1,16 @@
+import PrimeGapNormality.Prime.CorePrimeQuantitativeEnd
+
+/-! Type and transitive axiom checkpoint for the actual quantitative
+prime-position endpoint. Source only until centrally compiled. -/
+
+#check @PrimeGapNormality.Prime.CoreFiniteOrbitDiscrepancy.abs_orbitIntervalMass_sub_le
+#check @PrimeGapNormality.Prime.CoreKuperbergQuantitativeBudget.comparison_rate
+#check @PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_starDiscrepancy_rate
+#check @PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_digitWordCount_rate
+#check @PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_literal_digit_counts
+
+#print axioms PrimeGapNormality.Prime.CoreFiniteOrbitDiscrepancy.abs_orbitIntervalMass_sub_le
+#print axioms PrimeGapNormality.Prime.CoreKuperbergQuantitativeBudget.comparison_rate
+#print axioms PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_starDiscrepancy_rate
+#print axioms PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_digitWordCount_rate
+#print axioms PrimeGapNormality.Prime.CorePrimeQuantitativeEnd.primePosition_literal_digit_counts

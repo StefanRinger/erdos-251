@@ -1,0 +1,22 @@
+import PrimeGapNormality.Prime.CoreExecutableNormalFormDegree
+
+open PrimeGapNormality.Prime.CoreCyclic
+open PrimeGapNormality.Prime.CoreCyclic.Executable
+
+#check evaluateNormalForm
+#check evaluateNormalForm_correct
+#check exists_code
+#check exists_code_and_evaluation
+#check normalForm_least_degree_bound
+#check normalForm_attains_least_degree
+
+#check evaluateNormalForm_example_base_two
+#check evaluateNormalForm_example_base_three
+#print axioms evaluateNormalForm_example_base_two
+#print axioms evaluateNormalForm_example_base_three
+
+#print axioms evaluateNormalForm_correct
+#print axioms exists_code
+#print axioms exists_code_and_evaluation
+#print axioms normalForm_least_degree_bound
+#print axioms normalForm_attains_least_degree

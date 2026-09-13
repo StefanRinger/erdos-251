@@ -1,0 +1,190 @@
+import PrimeGapNormality.Prime.CoreRoundedPolynomialNormality
+import PrimeGapNormality.Prime.CoreRoundedRoughNormality
+import PrimeGapNormality.Prime.CoreRoundedRoughPolynomial
+import PrimeGapNormality.Prime.CoreRoundedRoughInfiniteFamily
+import PrimeGapNormality.Prime.CoreGeneralRoundedST
+import PrimeGapNormality.Prime.CoreGeneralRoundedFamily
+import PrimeGapNormality.Prime.CoreGeneralRoundedInfinite
+import PrimeGapNormality.Prime.CoreGeneralRoundedPolynomial
+
+/-!
+# Combined audit for the remaining rounded extensions
+
+This import-only audit combines the complete checking surfaces of
+`CoreRoundedPolynomialAudit`, `CoreRoundedSTAudit`,
+`CoreRoundedRoughAudit`, `CoreRoundedRoughFamilyAudit`, and
+`CoreGeneralRoundedAudit`.  It imports their proof modules directly and
+does not import any of the five audit modules, so their common dependency
+closure is loaded only once.
+
+No already accepted headline audit is reproduced here.
+-/
+
+namespace PrimeGapNormality.Prime
+
+/-! ## Deterministic polynomial scaling and the prime endpoint -/
+
+#check @CoreRoundedPolynomialScaling.roundedPolynomial_compact_error_le
+#check @CoreRoundedPolynomialScaling.eventually_roundedPolynomial_compact_expansion
+#check @CoreRoundedPolynomialScaling.roundedPolynomialIncrement_abs_le_linear
+#check @CoreScaledGapModelReference.CompactScaling
+#check @CoreScaledGapModelReference.eventually_pairAction_scaled_approx
+#check @CoreScaledGapModelReference.eventually_actualPhase_test_approx
+#check @CoreScaledGapModelReference.eventually_slot_sum_le
+#check @CoreScaledGapModelReference.eventually_finiteRootMean_le_joint_add_errors
+#check @CoreScaledGapModelReference.exists_reference_subsequence
+#check @CoreScaledGapModelReference.subsequenceReference_of_D
+#check @CoreRoundedPolynomialNormality.roundedPolynomial_compactScaling
+#check @CoreRoundedPolynomialNormality.roundedPolynomial_weyl_of_D
+#check @CoreRoundedPolynomialNormality.roundedPolynomial_isNormal_of_D
+#check @CoreRoundedPolynomialNormality.roundedPolynomial_isNormal_of_AHL
+#check @CoreRoundedPolynomialNormality.roundedPolynomial_isNormal_of_kuperberg
+#check @CoreRoundedPolynomialNormality.clearedRatPolynomial_natDegree
+#check @CoreRoundedPolynomialNormality.roundedRatPolynomialSeries_eq_rooted_add
+#check @CoreRoundedPolynomialNormality.roundedRatPolynomial_isNormal_of_D
+#check @CoreRoundedPolynomialNormality.roundedRatPolynomial_isNormal_of_AHL
+#check @CoreRoundedPolynomialNormality.roundedRatPolynomial_isNormal_of_kuperberg
+
+#print axioms CoreRoundedPolynomialScaling.roundedPolynomial_compact_error_le
+#print axioms CoreRoundedPolynomialScaling.roundedPolynomialIncrement_abs_le_linear
+#print axioms CoreScaledGapModelReference.exists_reference_subsequence
+#print axioms CoreScaledGapModelReference.subsequenceReference_of_D
+#print axioms CoreRoundedPolynomialNormality.roundedPolynomial_weyl_of_D
+#print axioms CoreRoundedPolynomialNormality.roundedPolynomial_isNormal_of_D
+#print axioms CoreRoundedPolynomialNormality.roundedPolynomial_isNormal_of_kuperberg
+#print axioms CoreRoundedPolynomialNormality.roundedRatPolynomial_isNormal_of_D
+#print axioms CoreRoundedPolynomialNormality.roundedRatPolynomial_isNormal_of_kuperberg
+
+/-! ## Concrete-model S/T and moving-rough rounded endpoints -/
+
+#check @CoreScaledGapSTNormality.tendsto_sequence_observableTestRemainder_zero
+#check @CoreScaledGapSTNormality.eventually_positive_le_profileMean
+#check @CoreScaledGapSTNormality.subsequenceReference_of_shapeS
+#check @CoreScaledGapSTNormality.observableFullSeries_weyl_clock_of_shapeS
+#check @CoreScaledGapSTNormality.observableFullSeries_isNormal_of_shapeS
+#check @CoreRoundedRoughNormality.movingRough_roundedCombination_isNormal
+#check @CoreRoundedRoughNormality.movingRough_roundedPolynomial_isNormal
+
+#print axioms CoreScaledGapSTNormality.tendsto_sequence_observableTestRemainder_zero
+#print axioms CoreScaledGapSTNormality.subsequenceReference_of_shapeS
+#print axioms CoreScaledGapSTNormality.observableFullSeries_weyl_clock_of_shapeS
+#print axioms CoreScaledGapSTNormality.observableFullSeries_isNormal_of_shapeS
+#print axioms CoreRoundedRoughNormality.movingRough_roundedCombination_isNormal
+#print axioms CoreRoundedRoughNormality.movingRough_roundedPolynomial_isNormal
+
+/-! ## Additional moving-rough polynomial endpoints -/
+
+#check @CoreRoundedRoughNormality.movingRough_roundedCombination_isNormal
+#check @CoreRoundedRoughNormality.movingRough_roundedPolynomial_isNormal
+#check @CoreRoundedRoughPolynomial.movingRough_roundedPolynomial_weyl
+#check @CoreRoundedRoughPolynomial.movingRough_roundedRatPolynomial_isNormal
+
+#print axioms CoreRoundedRoughNormality.movingRough_roundedCombination_isNormal
+#print axioms CoreRoundedRoughNormality.movingRough_roundedPolynomial_isNormal
+#print axioms CoreRoundedRoughPolynomial.movingRough_roundedPolynomial_weyl
+#print axioms CoreRoundedRoughPolynomial.movingRough_roundedRatPolynomial_isNormal
+
+/-! ## Finite and entire moving-rough rounded families -/
+
+#check @CoreRoundedRoughFamily.roundedRoughBasisObservable
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidueSeries
+#check @CoreRoundedRoughFamily.movingRoughFloorResidueSeries
+#check @CoreRoundedRoughFamily.movingRoughCeilResidueSeries
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_jointWeyl
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_weyl
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_isNormal_clock
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_isNormal
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_one_linearIndependent
+#check @CoreRoundedRoughFamily.movingRoughRoundedResidue_empirical_tendsto
+#check @CoreRoundedRoughInfiniteFamily.movingRoughRoundedInfiniteSeries
+#check @CoreRoundedRoughInfiniteFamily.one_movingRoughRoundedInfiniteSeries_linearIndependent
+
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_jointWeyl
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_weyl
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_isNormal_clock
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_rationalCombination_isNormal
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_one_linearIndependent
+#print axioms CoreRoundedRoughFamily.movingRoughRoundedResidue_empirical_tendsto
+#print axioms CoreRoundedRoughInfiniteFamily.one_movingRoughRoundedInfiniteSeries_linearIndependent
+
+/-! ## General calibrated-mixture rounded definitions -/
+
+#check @CoreGeneralRoundedFamily.basisObservable
+#print CoreGeneralRoundedFamily.basisObservable
+#check @CoreGeneralRoundedFamily.residueSeries
+#print CoreGeneralRoundedFamily.residueSeries
+#check @CoreGeneralRoundedInfinite.Exponent
+#print CoreGeneralRoundedInfinite.Exponent
+#check @CoreGeneralRoundedInfinite.entireSeries
+#print CoreGeneralRoundedInfinite.entireSeries
+#check @CoreGeneralRoundedPolynomial.integerSeries
+#print CoreGeneralRoundedPolynomial.integerSeries
+#check @CoreGeneralRoundedPolynomial.rationalSeries
+#print CoreGeneralRoundedPolynomial.rationalSeries
+
+/-! ## General deterministic scaling and natural-cutoff S/T -/
+
+#check @CoreGeneralScaledGapModelReference.eventually_mixture
+#print axioms CoreGeneralScaledGapModelReference.eventually_mixture
+#check @CoreGeneralScaledGapModelReference.exists_label_ranks
+#print axioms CoreGeneralScaledGapModelReference.exists_label_ranks
+#check @CoreGeneralScaledGapModelReference.exists_reference_subsequence
+#print axioms CoreGeneralScaledGapModelReference.exists_reference_subsequence
+#check @CoreGeneralScaledGapST.tail_test_tendsto_zero
+#print axioms CoreGeneralScaledGapST.tail_test_tendsto_zero
+#check @CoreGeneralScaledGapST.positive_comparison
+#print axioms CoreGeneralScaledGapST.positive_comparison
+#check @CoreGeneralScaledGapST.subsequenceReference
+#print axioms CoreGeneralScaledGapST.subsequenceReference
+#check @CoreGeneralScaledGapST.observableFullSeries_weyl
+#print axioms CoreGeneralScaledGapST.observableFullSeries_weyl
+#check @CoreGeneralRoundedST.rounded_compactScaling
+#print axioms CoreGeneralRoundedST.rounded_compactScaling
+#check @CoreGeneralRoundedST.roundedCombination_weyl
+#print axioms CoreGeneralRoundedST.roundedCombination_weyl
+#check @CoreGeneralRoundedST.roundedCombination_normal
+#print axioms CoreGeneralRoundedST.roundedCombination_normal
+
+/-! ## Exact real-cutoff pushforward consumers -/
+
+#check @CoreGeneralRoundedST.scaled_observable_weyl_realCutoff
+#print axioms CoreGeneralRoundedST.scaled_observable_weyl_realCutoff
+#check @CoreGeneralRoundedST.roundedCombination_normal_realCutoff
+#print axioms CoreGeneralRoundedST.roundedCombination_normal_realCutoff
+
+/-! ## Finite exponent/residue families -/
+
+#check @CoreGeneralRoundedFamily.basis_linear
+#print axioms CoreGeneralRoundedFamily.basis_linear
+#check @CoreGeneralRoundedFamily.exists_active_leading
+#print axioms CoreGeneralRoundedFamily.exists_active_leading
+#check @CoreGeneralRoundedFamily.residue_jointWeyl
+#print axioms CoreGeneralRoundedFamily.residue_jointWeyl
+#check @CoreGeneralRoundedFamily.residue_rationalCombination_normal
+#print axioms CoreGeneralRoundedFamily.residue_rationalCombination_normal
+#check @CoreGeneralRoundedFamily.residue_one_linearIndependent
+#print axioms CoreGeneralRoundedFamily.residue_one_linearIndependent
+#check @CoreGeneralRoundedFamily.residue_empirical_tendsto
+#print axioms CoreGeneralRoundedFamily.residue_empirical_tendsto
+#check @CoreGeneralRoundedFamily.residue_jointWeyl_realCutoff
+#print axioms CoreGeneralRoundedFamily.residue_jointWeyl_realCutoff
+
+/-! ## Entire exponent family -/
+
+#check @CoreGeneralRoundedInfinite.one_entireSeries_linearIndependent
+#print axioms CoreGeneralRoundedInfinite.one_entireSeries_linearIndependent
+#check @CoreGeneralRoundedInfinite.one_entireSeries_linearIndependent_realCutoff
+#print axioms CoreGeneralRoundedInfinite.one_entireSeries_linearIndependent_realCutoff
+
+/-! ## Literal integer/rational polynomial composition endpoints -/
+
+#check @CoreGeneralRoundedPolynomial.integerSeries_weyl
+#print axioms CoreGeneralRoundedPolynomial.integerSeries_weyl
+#check @CoreGeneralRoundedPolynomial.rationalSeries_eq_cleared_add
+#print axioms CoreGeneralRoundedPolynomial.rationalSeries_eq_cleared_add
+#check @CoreGeneralRoundedPolynomial.rationalSeries_normal
+#print axioms CoreGeneralRoundedPolynomial.rationalSeries_normal
+#check @CoreGeneralRoundedPolynomial.rationalSeries_normal_realCutoff
+#print axioms CoreGeneralRoundedPolynomial.rationalSeries_normal_realCutoff
+
+end PrimeGapNormality.Prime

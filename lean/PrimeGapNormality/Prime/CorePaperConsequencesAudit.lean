@@ -1,0 +1,25 @@
+import PrimeGapNormality.Prime.CorePrimeLocalClassification
+import PrimeGapNormality.Prime.CorePeriodicPositionEnd
+import PrimeGapNormality.Prime.CoreCommonPeriodEnd
+import PrimeGapNormality.Prime.CorePrimeLocalJointEnd
+
+/-! Actual paper consequences, kept separate from normal library imports. -/
+
+open PrimeGapNormality.Prime
+
+#check @corePrime_local_classification_of_D
+#print axioms corePrime_local_classification_of_D
+#check @corePrime_local_classification_of_kuperberg
+#print axioms corePrime_local_classification_of_kuperberg
+#check @CorePeriodicPositionEnd.primePositionSeries_isNormal_of_D
+#print axioms CorePeriodicPositionEnd.primePositionSeries_isNormal_of_D
+#check @CorePeriodicPositionEnd.primePositionSeries_isNormal_of_kuperberg
+#print axioms CorePeriodicPositionEnd.primePositionSeries_isNormal_of_kuperberg
+#check @CoreCommonPeriodEnd.jointWeyl_of_common_period_of_D
+#print axioms CoreCommonPeriodEnd.jointWeyl_of_common_period_of_D
+#check @CorePrimeLocalJointEnd.empirical_tendsto_of_D
+#print axioms CorePrimeLocalJointEnd.empirical_tendsto_of_D
+#check @CorePrimeLocalJointEnd.continuous_test_tendsto_of_D
+#print axioms CorePrimeLocalJointEnd.continuous_test_tendsto_of_D
+#check @CorePrimeLocalJointEnd.box_frequency_of_D
+#print axioms CorePrimeLocalJointEnd.box_frequency_of_D

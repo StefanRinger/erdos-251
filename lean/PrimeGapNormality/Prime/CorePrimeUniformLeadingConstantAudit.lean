@@ -1,0 +1,12 @@
+import PrimeGapNormality.Prime.CorePrimeUniformLeadingConstant
+
+namespace PrimeGapNormality.Prime.CorePrimeUniformLeadingConstantAudit
+
+#check @CorePrimeUniformLeadingConstant.leadingConstant
+#check @CorePrimeUniformLeadingConstant.leadingConstant_pos
+#check @CorePrimeUniformLeadingConstant.corePrimeGap_positive_window_uniform_leading
+
+#print axioms CorePrimeUniformLeadingConstant.leadingConstant_pos
+#print axioms CorePrimeUniformLeadingConstant.corePrimeGap_positive_window_uniform_leading
+
+end PrimeGapNormality.Prime.CorePrimeUniformLeadingConstantAudit

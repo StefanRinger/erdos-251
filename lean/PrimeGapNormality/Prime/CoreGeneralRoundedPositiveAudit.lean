@@ -1,0 +1,70 @@
+import PrimeGapNormality.Prime.CoreGeneralRoundedPositive
+
+/-! Full types and transitive axioms for the positive arbitrary-mixture
+rounded branch. This source audit is not a record of compilation. -/
+namespace PrimeGapNormality.Prime.CoreGeneralRoundedPositiveAudit
+
+#check @CoreGeneralRoundedPositive.RealShapeS
+#print CoreGeneralRoundedPositive.RealShapeS
+
+#check @CoreGeneralScaledGapPositiveST.gap_growth
+#print axioms CoreGeneralScaledGapPositiveST.gap_growth
+
+#check @CoreGeneralScaledGapPositiveST.positive_comparison
+#print axioms CoreGeneralScaledGapPositiveST.positive_comparison
+
+#check @CoreGeneralScaledGapPositiveST.subsequenceReference
+#print axioms CoreGeneralScaledGapPositiveST.subsequenceReference
+
+#check @CoreGeneralScaledGapPositiveST.observableFullSeries_weyl
+#print axioms CoreGeneralScaledGapPositiveST.observableFullSeries_weyl
+
+#check @CoreGeneralScaledGapPositiveST.observableFullSeries_normal
+#print axioms CoreGeneralScaledGapPositiveST.observableFullSeries_normal
+
+#check @CoreGeneralRoundedPositive.roundedCombination_weyl
+#print axioms CoreGeneralRoundedPositive.roundedCombination_weyl
+
+#check @CoreGeneralRoundedPositive.roundedCombination_normal
+#print axioms CoreGeneralRoundedPositive.roundedCombination_normal
+
+#check @CoreGeneralRoundedPositive.residue_jointWeyl
+#print axioms CoreGeneralRoundedPositive.residue_jointWeyl
+
+#check @CoreGeneralRoundedPositive.residue_rationalCombination_normal
+#print axioms CoreGeneralRoundedPositive.residue_rationalCombination_normal
+
+#check @CoreGeneralRoundedPositive.residue_one_linearIndependent
+#print axioms CoreGeneralRoundedPositive.residue_one_linearIndependent
+
+#check @CoreGeneralRoundedPositive.residue_empirical_tendsto
+#print axioms CoreGeneralRoundedPositive.residue_empirical_tendsto
+
+#check @CoreGeneralRoundedPositive.one_entireSeries_linearIndependent
+#print axioms CoreGeneralRoundedPositive.one_entireSeries_linearIndependent
+
+#check @CoreGeneralRoundedPositive.integerSeries_weyl
+#print axioms CoreGeneralRoundedPositive.integerSeries_weyl
+
+#check @CoreGeneralRoundedPositive.rationalSeries_normal
+#print axioms CoreGeneralRoundedPositive.rationalSeries_normal
+
+#check @CoreGeneralRoundedPositive.real_modelExpectation_eq
+#print axioms CoreGeneralRoundedPositive.real_modelExpectation_eq
+
+#check @CoreGeneralRoundedPositive.shapeS_of_real
+#print axioms CoreGeneralRoundedPositive.shapeS_of_real
+
+#check @CoreGeneralRoundedPositive.scaled_observable_normal_realCutoff
+#print axioms CoreGeneralRoundedPositive.scaled_observable_normal_realCutoff
+
+#check @CoreGeneralRoundedPositive.residue_jointWeyl_realCutoff
+#print axioms CoreGeneralRoundedPositive.residue_jointWeyl_realCutoff
+
+#check @CoreGeneralRoundedPositive.one_entireSeries_linearIndependent_realCutoff
+#print axioms CoreGeneralRoundedPositive.one_entireSeries_linearIndependent_realCutoff
+
+#check @CoreGeneralRoundedPositive.rationalSeries_normal_realCutoff
+#print axioms CoreGeneralRoundedPositive.rationalSeries_normal_realCutoff
+
+end PrimeGapNormality.Prime.CoreGeneralRoundedPositiveAudit

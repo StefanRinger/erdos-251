@@ -1,0 +1,8 @@
+import PrimeGapNormality.Prime.CoreRoughUniformDilation
+open PrimeGapNormality.Prime.CoreRoughUniformDilation
+#print eventually_uniform_real_compact
+#print eventually_uniform_floor_compact
+#print eventually_uniform_nat_compact
+#print axioms eventually_uniform_real_compact
+#print axioms eventually_uniform_floor_compact
+#print axioms eventually_uniform_nat_compact

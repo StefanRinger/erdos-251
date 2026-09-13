@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CoreCalibratedModelFiniteSharp
+
+namespace PrimeGapNormality.Prime.CoreCalibratedModelFiniteSharpAudit
+
+#check @CoreCalibratedModelFiniteSharp.eventually_single_cutoff
+#check @CoreCalibratedModelFiniteSharp.eventually_mixture
+#check @CoreCalibratedModelFiniteSharp.eventually_compact_bound
+
+#print axioms CoreCalibratedModelFiniteSharp.eventually_single_cutoff
+#print axioms CoreCalibratedModelFiniteSharp.eventually_mixture
+#print axioms CoreCalibratedModelFiniteSharp.eventually_compact_bound
+
+end PrimeGapNormality.Prime.CoreCalibratedModelFiniteSharpAudit

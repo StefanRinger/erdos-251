@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CoreResidueDominationSharp
+
+namespace PrimeGapNormality.Prime.CoreResidueDominationSharpAudit
+
+#check @CoreResidueDominationSharp.residueCount_div_length_tendsto
+#check @CoreResidueDominationSharp.length_div_residueCount_tendsto
+#check @CoreResidueDominationSharp.weak_limit_le_reference
+
+#print axioms CoreResidueDominationSharp.residueCount_div_length_tendsto
+#print axioms CoreResidueDominationSharp.length_div_residueCount_tendsto
+#print axioms CoreResidueDominationSharp.weak_limit_le_reference
+
+end PrimeGapNormality.Prime.CoreResidueDominationSharpAudit

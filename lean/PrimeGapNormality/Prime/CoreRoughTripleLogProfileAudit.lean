@@ -1,0 +1,25 @@
+import PrimeGapNormality.Prime.CoreRoughTripleLogProfile
+
+/-! Source-level audit surface for the explicit triple-log profile. -/
+
+namespace PrimeGapNormality.Prime.CoreRoughTripleLogProfileAudit
+
+#check @CoreRoughTripleLogProfile.profile
+#print CoreRoughTripleLogProfile.profile
+#check @CoreRoughTripleLogProfile.profileDerivative
+#print CoreRoughTripleLogProfile.profileDerivative
+
+#check @CoreRoughTripleLogProfile.profile_hasDerivAt
+#print axioms CoreRoughTripleLogProfile.profile_hasDerivAt
+#check @CoreRoughTripleLogProfile.tendsto_profile_atTop
+#print axioms CoreRoughTripleLogProfile.tendsto_profile_atTop
+#check @CoreRoughTripleLogProfile.weightedDerivative
+#print axioms CoreRoughTripleLogProfile.weightedDerivative
+#check @CoreRoughTripleLogProfile.hasLittleOSlopeProfile
+#print axioms CoreRoughTripleLogProfile.hasLittleOSlopeProfile
+#check @CoreRoughTripleLogProfile.zPsi_eq_tripleLog_cutoff
+#print axioms CoreRoughTripleLogProfile.zPsi_eq_tripleLog_cutoff
+#check @CoreRoughTripleLogProfile.movingRough_local_classification
+#print axioms CoreRoughTripleLogProfile.movingRough_local_classification
+
+end PrimeGapNormality.Prime.CoreRoughTripleLogProfileAudit

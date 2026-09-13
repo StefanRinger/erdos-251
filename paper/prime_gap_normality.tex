@@ -27,12 +27,13 @@
 \DeclareMathOperator{\Avg}{Avg}
 \title{Local gap statistics, telescoping, and normality\\
 \large A local-pattern approach to Erd\H os problem 251}
-\author{Stefan Ringer\thanks{2020 Mathematics Subject Classification:
+\author{Stefan Ringer\thanks{AI-assisted development with GPT~6~Astra and Fable~5.1.
+2020 Mathematics Subject Classification:
 Primary 11K16; Secondary 11N05, 11N36.
 Keywords: normal numbers, prime gaps, sieve methods, local patterns, telescoping.}}
 \hypersetup{pdftitle={Local gap statistics, telescoping, and normality},
   pdfauthor={Stefan Ringer}}
-\date{10 September 2026}
+\date{11 September 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -40,8 +41,9 @@ Erd\H os asked whether $\sum_{n\ge1}p_n2^{-n}$ is irrational.
 Under Kuperberg's uniform Hardy--Littlewood conjecture, we prove that
 for each fixed integer $B\ge2$ the corresponding series
 $\sum_{n\ge1}p_nB^{-n}$ is normal to base $B$.
-Our local-pattern criterion classifies geometrically weighted series of
-periodic rational polynomials in consecutive gaps: each is normal or
+Under the stated comparison and degree hypotheses, our local-pattern
+criterion classifies geometrically weighted series of periodic rational
+polynomials in consecutive gaps: each is normal or
 telescopes to a rational boundary value. The normal form determines
 all rational relations and joint orbit equidistribution of independent classes.
 For primes, a one-sided averaged hypothesis on tuples of size
@@ -83,6 +85,9 @@ Summation by parts replaces positions by gaps $g_n=p_{n+1}-p_n$:
 \begin{equation}\label{eq:abelbasic}
  \sum_{n\ge1}g_nB^{-n}=(B-1)\sum_{n\ge1}p_nB^{-n}-p_1.
 \end{equation}
+In base two the sister series $\sum_{m\ge1}2^{-\pi(m)}
+=\sum_{n\ge1}p_n2^{-n}-1$ has the same fractional part,
+where $\pi(m)$ counts the primes up to $m$.
 
 \begin{figure}[t]
 \centering
@@ -263,6 +268,12 @@ $z(x)=x^{1/(\log\log x\,\log\log\log x)}$ eventually. Different bases
 give different numbers, not absolute normality of one number.
 No fixed exponent $z(x)=x^\delta$, $\delta>0$, is obtained.
 
+Retaining all prime coefficients but widening their insertion clock to
+$S_n=\sum_{j=1}^n\lceil\log_B\log(j+3)\rceil$ gives unconditional
+base-$B$ normality of $\sum_{n\ge1}p_nB^{-S_n}$
+(Appendix~\ref{app:stretchedclock}). Contributions still overlap.
+The original clock $S_n=n$ is not covered by this unconditional result.
+
 \subsection{Overview of the proof}\label{sec:overview}
 
 Proposition~\ref{prop:localconsumer} transfers local pattern and tail
@@ -298,10 +309,12 @@ The first-gap mean keeps the dominating measure finite;
 the $k$-step recurrence handles periodic coefficients.
 
 \emph{Arithmetic and scale.}
-The normal-form degree $d$ requires rank $j=d\log_B G+O(1)$;
+The normal-form degree $d$ uses rank $j=d\log_B G+O(1)$;
 telescoping terms cost no depth.
 For primes, $G=\log X$ explains the $\log\log X$ depth and
 $D/\log B\le\kappa$; the reserve controls the infinite tail.
+Independently of the insertion rank, the present tail estimate requires
+$G\rho^{-L}\to0$.
 Stopped Bonferroni converts the one-sided tuple hypothesis to pattern
 comparison; first-gap averages bound the tail
 (Section~\ref{sec:primeadapter}). Appendix~\ref{app:rough} supplies
@@ -364,7 +377,8 @@ independence and joint orbit equidistribution of every fixed finite subfamily.
 Kova\v{c}'s variable-denominator counterexample chooses integers $q_n\ge2$,
 $q_n=o(p_n)$, without requiring monotonicity, so that
 $\sum p_n/(q_1\cdots q_n)$ telescopes \cite{kovacforum}.
-Our geometric weights, in contrast, are fixed in advance.
+Our weights, including the stretched clock in
+Appendix~\ref{app:stretchedclock}, are fixed in advance.
 
 Pratt proved irrationality of $\sum\omega(n)2^{-n}$ conditionally on
 uniform prime tuples \cite{pratt}; Tao--Ter\"av\"ainen proved it
@@ -439,7 +453,8 @@ Evaluation gives the finite identity
 \end{equation}
 where superscript $[N]$ denotes truncation at $n=N$.
 Whenever the endpoint vanishes, the series difference is rational;
-Lemma~\ref{lem:derivedgrowth} ensures this under (S).
+Lemma~\ref{lem:derivedgrowth} ensures this under (S$^+_c$),
+and hence also under (S).
 Thus the series modulo $\Q$ depends only on the vector-space class
 of $F$ modulo $\mathcal T_B\mathcal G^k$.
 Within the effective-degree range, the arithmetic theorem rules out
@@ -548,15 +563,26 @@ well-defined by the following consequence of (S); the quantitative mean
 bound in (T) remains a separate assumption. The model estimates used
 here are proved in Section~\ref{sec:model}.
 
+For the qualitative criterion, the following weaker positive form is
+sufficient. Write (S$^+_c$) if, for some fixed $c\ge1$, the same
+calibrated mixtures satisfy the upper inequality in (S) for every
+$0\le f\le1$ supported on $x_L\le S$, with the model term multiplied
+by $c$, and the actual mass of $x_L>S$ tends to zero. Both the error
+and the support convention have the same uniformity as in (S).
+Condition (S) implies (S$^+_1$), using the model span estimate.
+The growth lemma and digital criterion below also hold under
+(S$^+_c$)/(T); total-variation approximation is not required.
+
 \begin{lemma}[Growth from local pattern comparison]\label{lem:derivedgrowth}
-Condition (S) implies $m_X\to\infty$ and $\log a_n/n\to0$.
+Under (S$^+_c$), and therefore also under (S), one has
+$m_X\to\infty$ and $\log a_n/n\to0$.
 Consequently every fixed local polynomial series with geometric
 denominator converges absolutely, and all boundaries in
 \eqref{eq:localboundary} vanish.
 \end{lemma}
 \begin{proof}
-(S) and the model span bound make the actual mass on $x_L\le S$
-tend to one. A fixed location $1\le d\le S$ survives the independent
+The span-failure clause of (S$^+_c$) makes the actual mass on
+$x_L\le S$ tend to one. A fixed location $1\le d\le S$ survives the independent
 prime coordinates $S<p\le y$ with probability
 \[
  \prod_{S<p\le y}(1-1/(p-1))
@@ -564,9 +590,9 @@ prime coordinates $S<p\le y$ with probability
 \]
 uniformly in calibrated mixtures. Choose $n\in I_X$ with
 $a_{n+L}-a_n\le S$, and put $d_X=g_n$.
-(S) on $\ind_{\{x_1=d_X,\,x_L\le S\}}$
-gives $1/m_X\le\epsilon_X+O(\log S/G_X)\to0$, where
-$\epsilon_X\to0$ is the uniform error in (S). Thus $m_X\to\infty$,
+The positive comparison on $\ind_{\{x_1=d_X,\,x_L\le S\}}$
+gives $1/m_X\le\epsilon_X+O_c(\log S/G_X)\to0$, where
+$\epsilon_X\to0$ is the uniform error in (S$^+_c$). Thus $m_X\to\infty$,
 without using a spacing limit.
 
 Fix $K$. For all sufficiently large integers $J$,
@@ -617,7 +643,8 @@ with Lebesgue measure.
 \subsection{The digital transfer criterion}\label{sec:commonproof}
 
 \begin{proposition}[Digital transfer criterion]\label{prop:localconsumer}
-Assume (S)/(T). Fix integers $B\ge2$, $D,k\ge1$ with $B\ge\rho^D$.
+Assume (S$^+_c$)/(T); in particular, (S)/(T) suffices.
+Fix integers $B\ge2$, $D,k\ge1$ with $B\ge\rho^D$.
 For any rational local tuple $F\in\mathcal G^k$ with
 $\deg\mathcal N_{B,k}F\le D$, its series $\alpha_F$
 is rational if $\mathcal N_{B,k}F=0$, and normal to base $B^k$
@@ -668,7 +695,8 @@ $2w/m_X$, so (T) and $\rho^{-K}=\rho^w\rho^{-L}$ give
 \]
 Here $G\rho^{-L}\le\rho^{-\sqrt{\log_\rho G}}\to0$.
 Uniform continuity transfers every fixed continuous phase test.
-Condition (S) bounds the mass omitted by the span restriction.
+The span-failure clause of (S$^+_c$) bounds the mass omitted by the
+span restriction.
 
 \smallskip\noindent\emph{Step 2. One-point variation at the critical rank.}
 Moving a point $x_j$, with
@@ -830,20 +858,24 @@ insertion, the same cutoff becomes
 $\chi_A(Y_X^-)$ under the auxiliary law. Thus
 \[
  \nu_X(f)\le
- 24k\,\E^-\!\left[\chi_A(Y_X^-)
+ 24kc\,\E^-\!\left[\chi_A(Y_X^-)
        \int_0^{W(Y_X^-)}
           f(O_{\mathcal F}+\theta_XQ_{Y_X^-}(z))\,dz\right]
-       +O_{F,k}(A^{-1})\|f\|_\infty+o(1).
+       +O_{F,k,c}(A^{-1})\|f\|_\infty+o(1).
 \]
-Here (S), the span estimate and the remainder bound first transfer the
-test on actual offsets to the model. The probabilities of exceptional
-counts and large original frames are bounded before changing measure. On the compact cutoff the tests are
-equicontinuous, uniformly over the outer phase.
+Step~1 reduces the comparison to the first-$L$ test
+$H_X(x)=\ind_{\{x_L\le S\}}f(\Phi_K(x))$, where $\Phi_K(x)$ is
+the truncated phase constructed from the offsets $x$.
+Apply (S$^+_c$) after normalizing $f$; the zero test is trivial.
+The actual tail and span failure are controlled by Step~1.
+Under the model, exceptional counts and large original frames are
+discarded before changing measure. On the compact cutoff the
+insertion tests are bounded and equicontinuous, uniformly in the outer phase.
 Equations~\eqref{eq:frameaverage} and \eqref{eq:positiveinsertion}
 give $12\vartheta G/\log G<24$; positivity permits extension to all
 auxiliary frames. The cutoff integral is bounded and jointly continuous
 in $(O,Y,t)$. Pass to the fixed joint limit, use $\chi_A\le1$, and then
-send $A\to\infty$. This gives $\nu\le24k\sigma$, hence $\nu\ll\lambda$.
+send $A\to\infty$. This gives $\nu\le24kc\sigma$, hence $\nu\ll\lambda$.
 
 \smallskip\noindent\emph{Step 4. Invariance and the full orbit.}
 For every continuous $f$, \eqref{eq:sharedrecursion} gives
@@ -874,19 +906,16 @@ so $(B^{kh+r}\alpha_F)_h$ is equidistributed. Interleaving these
 $k$ subsequences gives base-$B$ normality.
 \end{proof}
 
-\paragraph{Positive comparison suffices.}
-The criterion and its consequences also hold if (S) is replaced by
-its upper inequality for $0\le f\le1$, with the model term multiplied
-by a fixed $c\ge1$, provided the actual mass outside $x_L\le S$ is $o(1)$.
-Keep the same support, uniformity and calibrated mixtures, and (T).
-The positive point test still proves Lemma~\ref{lem:derivedgrowth};
-Step~3 gives $\nu\le24kc\sigma$. All other steps are unchanged.
+\paragraph{Positive comparison and its factor.}
+The proof used only (S$^+_c$)/(T). Its reference bound is
+$\nu\le24kc\sigma$, while the model-only reference has mass at most two.
+The stronger condition (S) gives the case $c=1$.
 
 \subsection[Relations and positions]{Relations, dimension and positions}\label{sec:consequences}
 
 The rational boundary in \eqref{eq:localboundary} and the criterion
 give exactly the rational relations between the normal classes.
-Under (S)/(T), fix integers $B\ge2$, $k,H,D\ge1$ with $B\ge\rho^D$.
+Under (S$^+_c$)/(T), fix integers $B\ge2$, $k,H,D\ge1$ with $B\ge\rho^D$.
 For period $k$, $H$ gap variables and total degree at most $D$,
 the normal monomials are the $k$ labelled copies of
 $u_0^{\beta_0}\cdots u_{H-1}^{\beta_{H-1}}$ with $\beta_0\ge1$
@@ -927,8 +956,7 @@ period-one case; no new position-tail estimate is needed.
 \subsection{Rounded real gap powers}\label{sec:roundedpowers}
 
 \begin{corollary}[Rounded real gap powers]\label{cor:roundedpowers}
-Assume (S)/(T), or the positive-comparison variant of
-Proposition~\ref{prop:localconsumer}. Fix integers $B\ge2$, $k\ge1$
+Assume (S$^+_c$)/(T). Fix integers $B\ge2$, $k\ge1$
 with $B\ge\rho$. For $1\le r\le k$ and real $0<\alpha\le1$, put
 \[
  V_{r,\alpha}=\sum_{h\ge0}
@@ -997,16 +1025,17 @@ in Step~4 prove normality. Rational lifts and scalar Weyl give the
 remaining conclusions.
 
 Ceilings have the same bounded rounding error. For the polynomial
-assertion, clear denominators in $P$, let $b\ne0$ be its leading
-coefficient, and put $a=m\alpha\le1$.
+assertion, choose an integer $Q\ge1$ such that
+$\widetilde P(T)=Q(P(T)-P(0))\in\mathbb Z[T]$.
+Let $b\ne0$ be its leading coefficient and put $a=m\alpha\le1$.
 With $R$ denoting either floor or ceiling,
-$F(q)=P(R(q^\alpha))-P(0)$ is integral, satisfies $|F(q)|\ll q$, and,
-uniformly for integers $0\le q\le AG$,
+$F(q)=\widetilde P(R(q^\alpha))$ is integral, satisfies $|F(q)|\ll q$,
+and, uniformly for integers $0\le q\le AG$,
 \[
  G^{-a}F(q)=b(q/G)^a+O_A(G^{-\alpha}).
 \]
-The preceding $k=1$ argument applies; restore the rational constant
-$P(0)/(B-1)$ and lift back through the cleared denominator.
+The preceding $k=1$ argument applies. Divide the resulting series by
+$Q$ and restore $P(0)/(B-1)$, using Lemma~\ref{lem:rigidity}.
 \end{proof}
 
 The prime hypothesis in Theorem~\ref{thm:prime}, and hence also
@@ -1447,15 +1476,29 @@ Since $J_\nu\le\nu_L$, taking positive parts gives
 The calibration and normalization costs are bounded by $c$ times their
 previous bounds. Thus \eqref{eq:dominationinput} yields the positive
 comparison above, including actual span failure; (T) is unchanged.
-For $c=1$, grouping the alternating errors by $K$ before taking positive
-parts gives $\mathfrak D_{X,1}\le\mathfrak E_X+o(1)$:
-the model remainder and calibration give
-$N_X^{-1}\sum_KJ_{M_X}(K)=1+o(1)$.
+For $c=1$, the identity $-a+[a-b]_+=-b+[b-a]_+$ gives
+\begin{equation}\label{eq:dominationidentity}
+ \mathfrak D_{X,1}
+ =1-\frac1{N_X}\sum_KJ_{M_X}(K)
+  +\frac1{N_X}\sum_K[J_{M_X}(K)-J_{C_X}(K)]_+.
+\end{equation}
+Grouping the alternating errors by $K$ therefore gives
+$\mathfrak D_{X,1}\le\mathfrak E_X+o(1)$, since the model remainder
+and calibration give $N_X^{-1}\sum_KJ_{M_X}(K)=1+o(1)$.
 Hence (AHL$_\kappa$) still suffices. Allowing $c>1$ requires bounded
 domination, not total-variation approximation.
 The tuple orders and window are unchanged. No separate $(r+1)$st
 factorial-moment assumption is made: actual span failure and the
 stopped remainder are included in the first term.
+
+For the qualitative $\mathfrak D$-criterion one need not prove
+$\zeta_X\to1$: the elementary bound $0\le\zeta_X\le16$ for
+sufficiently large $X$ suffices. Keep the calibrated mixture
+unnormalized until applying a positive test, and absorb $\zeta_X$
+in its majorant. A comparison factor $c_D$ in the arithmetic input
+then gives the normalized factor $c_S=16c_D$. In particular, the
+reference bound is $24k c_S\sigma$. The AHL calibration and the
+quantitative estimates retain their separately stated hypotheses.
 
 \subsection[Tail bound and Kuperberg input]{The tail bound and Kuperberg's conjecture}
 
@@ -1474,11 +1517,16 @@ positivity and telescoping give
  \end{aligned}
 \end{equation}
 The bound uses $v+L+h\le(h+2)v$ and retains the shift $n+L$.
-For primes, PNT gives $\pi(4X)/\pi(X)\to4$ and hence
-$p_{2n}\le4p_n$ eventually. On $I_X=[u,v]\cap\Z$ one has
-$p_v\le2X$, $m_X\asymp X/G_X$ and $L=o(v)$, so
-\eqref{eq:tailmass} proves (T). With $B\ge\rho^D$ equivalent to
-$D/\log B\le\kappa$, this proves Theorem~\ref{thm:prime}.
+For primes, elementary dyadic counting bounds give
+$m_X\gg X/\log X$ and $v=\pi(2X)\ll X/\log X$.
+Together with $p_j\ll j\log(j+2)$ and $L=o(X/\log X)$, these imply
+$p_{v+L+h}\ll X(h+2)^2$ uniformly for $h\ge1$.
+The same telescoping sum therefore has size $O_\rho(X)$, proving
+(T) after division by $m_X$. Thus the qualitative D-criterion needs
+no PNT estimate for this tail step. The degree/base condition remains
+$D/\log B\le\kappa$.
+Together with Proposition~\ref{prop:localconsumer} and
+Section~\ref{sec:consequences}, this proves Theorem~\ref{thm:prime}.
 
 Kuperberg's Conjecture~1.3 \cite[Conjecture 1.3, equation (7)]{kuperberg}
 posits absolute $K,\epsilon>0$ such that every admissible distinct
@@ -1498,6 +1546,19 @@ For all others, substituting the raw error directly gives
    \le X^{-\epsilon}\exp(O_\kappa((\log\log X)^2))\longrightarrow0.
 \]
 No individual main-term lower bound or relative error is needed.
+In fact, the same calculation requires less than a fixed power saving.
+For fixed $\kappa>0$, choose $A>40\kappa$: it suffices to assume the
+main term in \eqref{eq:khl} with uniform error
+$O_A(x\exp\{-A(\log\log x)^2\})$ for admissible tuples in
+$[0,(\log x)^2]$ of order at most $(A/2)\log\log x$.
+Writing $\ell=\log\log X$, we have $r+1=(20\kappa+o(1))\ell$ and
+\[
+ \sum_{j=L}^r\binom{j-1}{L-1}\binom Sj
+ \le(r+1)2^rS^r=\exp\{(20\kappa+o(1))\ell^2\}.
+\]
+Thus $\mathfrak E_X\ll\exp\{-(A-20\kappa+o(1))\ell^2\}\to0$.
+This is a sufficient input for the qualitative conclusions at the
+chosen $\kappa$; the quantitative corollary retains its stated hypothesis.
 Ordinary qualitative Hardy--Littlewood for each fixed tuple does not
 assert this growing-order, growing-shift uniformity. The singleton
 case of \eqref{eq:khl} supplies PNT when assuming Kuperberg's conjecture;
@@ -1545,20 +1606,27 @@ expressions such as $\lfloor\min(g_n,tg_{n+1})\rfloor$ ($t>0$),
 and compressed clocks such as $\sum_{n\ge1}p_{2n}2^{-n}$:
 these test the variation scale, flat insertion intervals, and the
 recurrence's time scale, respectively.
-A separate question is whether weaker arithmetic assumptions give
+A further question is whether weaker arithmetic assumptions yield
 contiguity of the prime first-$L_X$ pattern law $P_X$ to the calibrated
-model law $Q_X$, namely $Q_X(E_X)\to0\Rightarrow P_X(E_X)\to0$ for every
-varying event family $E_X$, adjoining the same span-failure symbol to both laws.
-This would rule out concentration on model-negligible families without
-requiring matching probabilities; these extensions and their tail
-requirements are left for separate work.
-Separate follow-up work in preparation develops preliminary normality
-arguments for a moving-small-prime-cutoff $\omega$-series. These arguments
-await independent review; normality of $\sum_{n\ge1}\omega(n)2^{-n}$
-remains unproved here.
+model law $Q_X$: for every varying event family,
+$Q_X(E_X)\to0$ would imply $P_X(E_X)\to0$, with the same
+span-failure symbol adjoined to both laws. Could this provide a weaker
+sufficient interface, together with actual tail control? No necessity
+claim is made, and its arithmetic justification is left for future work.
+
+Separate follow-up work investigates extending the normality transfer to
+$\sum_{n\ge1}\omega(n)2^{-n}$ and $\sum_{n\ge1}\Omega(n)2^{-n}$,
+where $\omega$ counts distinct prime factors and $\Omega$ counts them
+with multiplicity; neither normality statement is proved here.
+Can computable integer denominators $Q_n\sim2^n$ yield binary-normal
+prime-polynomial series?
 
 \paragraph{Formal verification.}
-A Lean formalization is in progress.
+The core theorems and Proposition~\ref{prop:stretchedclock} have locally
+checked Lean formalizations, with the stated arithmetic hypotheses
+explicit and the actual infinite-series values identified. The only
+assumption of the stretched-clock end theorem is $B\ge2$. Separate
+audit modules record the end types and their transitive axiom dependencies.
 
 \paragraph{Acknowledgements and provenance.}
 GPT~6~Astra led the mathematical development, and Fable~5.1 acted as a
@@ -1788,7 +1856,6 @@ supplies (S)/(T) with the window parameters \eqref{eq:profile};
 Proposition~\ref{prop:localconsumer} and
 Section~\ref{sec:consequences} prove Theorem~\ref{thm:rough}.
 
-\clearpage
 \section[Quantitative positive comparison]{Quantitative positive comparison for the prime series}
 \label{app:quantitative}
 
@@ -1962,9 +2029,7 @@ The same odd stopped transform, with $c=1$, gives
  O\!\left(|\zeta_X-1|+b_{\nu_X}+R_{\nu_X}
                        +\delta_X\zeta_X e^{H_*L}\right).
 \]
-This follows also by writing
-$\mathfrak D_{X,1}=1-N_X^{-1}\sum_KJ_{M_X}(K)
-+N_X^{-1}\sum_K[J_{M_X}(K)-J_{C_X}(K)]_+$.
+This follows from \eqref{eq:dominationidentity}.
 Under \eqref{eq:khl},
 $\mathfrak E_X\le X^{-\epsilon}\exp(O_B((\log G)^2))$.
 Its singleton case and minimal-cutoff calibration give
@@ -2020,6 +2085,162 @@ for normality, but specifies no fixed convergence rate for its own error.
 Kuperberg supplies the quantitative input used in the corollary.
 Nonlinear polynomial insertion images need not have bounded densities;
 a quantitative polynomial classification is not asserted.
+
+\section{Unconditional normality with a stretched clock}
+\label{app:stretchedclock}
+
+Here every prime coefficient is retained and only the insertion clock
+is widened. Contributions still overlap: their lengths are of order
+$\log n$, whereas adjacent positions are only $O_B(\log\log n)$ apart.
+At this spacing, one-prime upper sieve bounds supply absolute continuity;
+the same invariance argument gives normality without a prime-pattern hypothesis.
+
+\begin{proposition}[A logarithmically stretched prime series]
+\label{prop:stretchedclock}
+For each fixed integer $B\ge2$, put
+\[
+ k_n=\left\lceil\log_B\log(n+3)\right\rceil,\qquad
+ S_0=0,\quad S_n=\sum_{j=1}^n k_j,\qquad
+ \xi_B=\sum_{n\ge1}p_nB^{-S_n}.
+\]
+Then $\xi_B$ is unconditionally normal to base $B$, and
+$S_n\sim n\log_B\log n$.
+\end{proposition}
+
+We first record the elementary arithmetic bound needed below.
+Write $\lambda$ for normalized Lebesgue measure on $\mathbb T=\R/\Z$.
+
+\begin{lemma}[Prime residues and arcs]\label{lem:clockarcs}
+Uniformly for sufficiently large $N$, integers
+$2\le a\le(\log N)^2$, units $v$ modulo $a$, and arcs $J\subset\mathbb T$,
+\[
+ \#\{n\le N:vp_n/a\bmod1\in J\}
+ \ll N\bigl(\lambda(J)+a^{-1/2}\bigr)+aN^{1/2}.
+\]
+\end{lemma}
+\begin{proof}
+In the quadratic proof of Lemma~\ref{lem:selbergcap}, restrict every
+sieve divisor to be coprime to $a$. Its normalization becomes
+\[
+ J_a(R)=\sum_{\substack{d\le R\\(d,a)=1}}\frac{\mu(d)^2}{\phi(d)}
+ \ge\sum_{\substack{n\le R\\(n,a)=1}}\frac1n
+ \ge\frac{\phi(a)}a\log\bigl(\lfloor R/a\rfloor+1\bigr).
+\]
+The first inequality groups by radical; the second groups the complete
+blocks of $a$ integers, each containing $\phi(a)$ coprime integers.
+Take $y_r=\mu(r)\mathbf1_{(r,a)=1}/(\phi(r)J_a(R))$ for $r\le R$
+and $\lambda_d=d\sum_{m\le R/d}\mu(m)y_{dm}$.
+Divisor inversion and the gcd identity give $\lambda_1=1$ and quadratic
+main term $1/J_a(R)$.
+For squarefree $d$ coprime to $a$,
+\[
+ |\lambda_d|=\frac{d}{\phi(d)J_a(R)}
+ \sum_{\substack{m\le R/d\\(m,ad)=1}}\frac{\mu(m)^2}{\phi(m)}\le1:
+\]
+retain in $J_a(R)$ the distinct terms $em$, $e\mid d$, from this sum,
+using $\sum_{e\mid d}\phi(e)^{-1}=d/\phi(d)$.
+All other weights vanish. With $R=\lfloor N^{1/4}\rfloor$, apply the
+quadratic count to $p=at+b$, $(a,b)=1$, using $p_N\ll N\log N$:
+\[
+ \#\{R<p\le p_N:p\text{ prime},\ p\equiv b\pmod a\}
+ \le\frac{p_N}{aJ_a(R)}+R^2
+ \ll\frac{N}{\phi(a)}+N^{1/2}.
+\]
+Every counted prime exceeds $R$, and each supported least common
+multiple is coprime to $a$, so its progression count has error at most one.
+
+M\"obius inversion counts the coprime residues in an arc with error
+$O(2^{\omega(a)})$. Moreover
+$2^{\omega(a)}/\phi(a)\ll a^{-1/2}$: after multiplying by $\sqrt a$,
+its factor at $p^e\parallel a$ is
+$2p^{1-e/2}/(p-1)\le1$ for $p\ge7$, and the primes $2,3,5$ contribute
+a bounded factor. Multiplication by $v$ permutes the units, so the
+number of eligible residues is
+$\phi(a)\{\lambda(J)+O(a^{-1/2})\}$, uniformly in $v,J$.
+Sum the preceding upper bound over these residues. The at most $R$
+primes $p\le R$, including any prime dividing $a$, are absorbed by
+$aN^{1/2}$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:stretchedclock}]
+Write $q_n=B^{k_n}$ and $g_n=p_{n+1}-p_n$.
+Convergence follows from $S_n\ge n$ and
+$p_n\ll n\log(n+2)$; summing the slowly varying $k_n$ gives the
+stated asymptotic. At an insertion point the exact actual tail is
+\[
+ R_{n-1}=\sum_{j\ge0}\frac{p_{n+j}}{q_n\cdots q_{n+j}},\qquad
+ B^{S_{n-1}}\xi_B-R_{n-1}\in\Z.
+\]
+Consequently $B^rR_{n-1}\bmod1$, $0\le r<k_n$, enumerates
+\emph{every} intervening base-$B$ orbit position.
+
+Let $\nu_N$ be the empirical law of the first $S_N$ orbit positions and
+$\widetilde\nu_N$ the law obtained by replacing each $B^rR_{n-1}$ by
+$B^rp_n/(q_n-1)$, for $n\le N$ and $0\le r<k_n$.
+Put $M=\lfloor\sqrt N\rfloor$, $G=\log N$, and discard $n\le M$.
+For $M<n\le N$, we have $q_n\asymp_B G$, $k_n\asymp_B\log G$,
+and at most two base labels: indeed
+\[
+ \log_B\log(N+3)-\log_B\log(M+4)<\log_B2\le1.
+\]
+With $H=\lceil G^2\rceil$, also discard indices whose next $H$
+positions meet a base change or exceed $N$. There are $O(H)$ such
+indices; the total discarded digit mass is at most
+$S_M+O(Hk_N)=o(S_N)$.
+For a retained index, freeze $q=q_n$. Monotonicity of the later bases
+and polynomial prime growth give
+\[
+ \left|R_{n-1}-\frac{p_n+U_q(n)}{q-1}\right|
+ \ll NG\,2^{-H/2}=:\eta_N,\qquad
+ U_q(n)=\sum_{j\ge0}g_{n+j}q^{-j-1}.
+\]
+The fraction is the exact constant-base Abel identity. Put
+$Z_n=\sum_{j\ge0}2^{-j}g_{n+j}$. As in \eqref{eq:tailmass},
+telescoping and $p_m\ll m\log(m+2)$ give directly
+\[
+ \sum_{n\le N}Z_n
+ =\sum_{j\ge0}2^{-j}(p_{N+j+1}-p_{j+1})\ll NG,
+ \qquad U_q(n)\le Z_n/q.
+\]
+Summing the amplifications, rather than taking their maximum, gives
+\[
+ \sum_{r=0}^{k_n-1}\frac{B^rU_q(n)}{q_n-1}
+       =\frac{U_q(n)}{B-1}\le\frac{Z_n}{q_n(B-1)}.
+\]
+Hence the sum of circle-distances on retained positions, divided by
+$S_N$, is
+\[
+ O_B\!\left(\frac{NG}{S_N\min_{M<n\le N}q_n}+G\eta_N\right)=o(1).
+\]
+Restoring the discarded positions costs $o(1)$ for bounded tests.
+Thus $\nu_N$ and $\widetilde\nu_N$ have the same weak limits.
+
+For either base label $q$ on $M<n\le N$, apply
+Lemma~\ref{lem:clockarcs} with $a=q-1\asymp_B G$ and $v=B^r$,
+which is a unit modulo $a$. Enlarge its index set to all $n\le N$
+in this upper bound, and sum over its at most $k_N$ digit positions.
+The two labels, together with the initial mass $S_M/S_N=O_B(N^{-1/2})$,
+give for every open arc $J$
+\[
+ \widetilde\nu_N(J)
+ \le C_B\lambda(J)+O_B\!\left(G^{-1/2}+G N^{-1/2}\right).
+\]
+Portmanteau and regularity give
+$\nu\le C_B\lambda$ for every common weak limit $\nu$.
+
+The actual positions form the consecutive orbit prefix from $0$ to
+$S_N-1$. Its shift defect consists of two endpoints divided by $S_N$,
+so $\nu$ is invariant under multiplication
+by $B$. Lemma~\ref{lem:rigidity} gives $\nu=\lambda$.
+Compactness gives $\nu_N\Rightarrow\lambda$, and $k_{N+1}=o(S_N)$
+handles the last incomplete insertion block. Thus every digit prefix
+converges to Lebesgue measure, proving normality.
+\end{proof}
+
+The product denominators give an integer-coefficient Cantor-type series.
+The prime coefficients eventually exceed the local bases, so this is
+not a canonical Cantor digit expansion \cite{aireymancevandehey2016};
+the conclusion concerns every base-$B$ orbit position.
 
 \section{Connections behind the proof}\label{app:confluence}
 
@@ -2110,7 +2331,7 @@ under its hypotheses and degree bound. The shaded blocks distinguish background 
 (S), (T) are the two arithmetic inputs. The orbit reading uses integral
 coefficients and $n\equiv1\pmod k$, with $U(1)=\alpha_F$.
 Here $\nu$ is an orbit-limit probability measure, $\lambda$ Lebesgue measure,
-$T_C(x)=Cx\bmod1$, and $C_0=24k$. The positive-comparison variant
+$T_C(x)=Cx\bmod1$, and $C_0=24k$. The positive-comparison form
 replaces (S) and multiplies $C_0$ by the fixed factor $c$.}
 \label{fig:confluence}
 \end{figure}
@@ -2277,5 +2498,11 @@ V.~Bergelson and T.~Downarowicz, \emph{On preservation of normality
 and determinism under arithmetic operations}, arXiv:2506.12929v1 (2025),
 Proposition~4.25 and Remark~4.28.
 \url{https://arxiv.org/html/2506.12929v1}.
+\bibitem{aireymancevandehey2016}
+D.~Airey, B.~Mance and J.~Vandehey, \emph{Normal number constructions
+for Cantor series with slowly growing bases}, Czechoslovak Math. J.
+\textbf{66} (2016), 465--480.
+\href{https://doi.org/10.1007/s10587-016-0269-7}{doi:10.1007/s10587-016-0269-7}.
+
 \end{thebibliography}
 \end{document}

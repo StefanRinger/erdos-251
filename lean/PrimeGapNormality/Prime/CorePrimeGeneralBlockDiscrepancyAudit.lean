@@ -1,0 +1,27 @@
+import PrimeGapNormality.Prime.CorePrimeGeneralBlockDiscrepancy
+
+/-! Exact type and axiom audit for the visible-`D` quantitative block
+consumer.  No assertion that `D` tends to zero is part of these endpoints. -/
+
+namespace PrimeGapNormality.Prime
+
+#print CorePrimeGeneralBlockDiscrepancy.generalPrimeD
+#print CorePrimeGeneralBlockDiscrepancy.generalBlockEta
+#print CorePrimeGeneralBlockDiscrepancy.generalBlockTime
+#print CorePrimeGeneralBlockDiscrepancy.generalBlockRamp
+#print CorePrimeGeneralBlockDiscrepancy.generalBlockRate
+
+#check @CorePrimeGeneralBlockDiscrepancy.eventually_primePosition_finitePositiveDomination_general
+#print axioms CorePrimeGeneralBlockDiscrepancy.eventually_primePosition_finitePositiveDomination_general
+#check @CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlock_tail_zero
+#print axioms CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlock_tail_zero
+#check @CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlockEta_zero
+#print axioms CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlockEta_zero
+#check @CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlockRate_zero
+#print axioms CorePrimeGeneralBlockDiscrepancy.tendsto_generalBlockRate_zero
+#check @CorePrimeGeneralBlockDiscrepancy.eventually_generalBlockScaleBounds
+#print axioms CorePrimeGeneralBlockDiscrepancy.eventually_generalBlockScaleBounds
+#check @CorePrimeGeneralBlockDiscrepancy.primePositionBlock_discrepancy_general
+#print axioms CorePrimeGeneralBlockDiscrepancy.primePositionBlock_discrepancy_general
+
+end PrimeGapNormality.Prime

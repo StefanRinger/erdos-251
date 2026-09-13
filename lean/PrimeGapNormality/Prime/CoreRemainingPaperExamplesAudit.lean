@@ -1,0 +1,104 @@
+import PrimeGapNormality.Prime.CoreBFreeDensityExclusion
+import PrimeGapNormality.Prime.CoreSquareSequenceExample
+import PrimeGapNormality.Prime.CoreSparseBinarySeries
+import PrimeGapNormality.Prime.CoreTwinGapDensity
+import PrimeGapNormality.Prime.CoreTwinIndicatorEnd
+import PrimeGapNormality.Prime.CoreTwinIndicatorEquivalence
+
+/-!
+# Batched audit of the remaining paper examples
+
+Direct proof-module imports replace six separate audit entrypoints. Every
+existing signature, definition-print and transitive-axiom command is retained,
+including the support-infinitude equivalence. No theorem is declared here.
+This source is an audit entrypoint, not a record of kernel acceptance.
+-/
+
+namespace PrimeGapNormality.Prime.CoreRemainingPaperExamplesAudit
+
+/-! Commands from `CoreBFreeDensityExclusionAudit.lean`. -/
+#check @CoreBFreeDensityExclusion.seqCount_enum_eq_bfree_card
+#check @CoreBFreeDensityExclusion.tendsto_seqCount_enum_div
+#check @CoreBFreeDensityExclusion.enum_not_complexPatternS
+#check @CoreBFreeDensityExclusion.enum_not_realPatternS
+#check @CoreBFreeDensityExclusion.seqCount_nth_squarefree_eq_card
+#check @CoreBFreeDensityExclusion.tendsto_seqCount_nth_squarefree_div
+#check @CoreBFreeDensityExclusion.nth_squarefree_not_complexPatternS
+#check @CoreBFreeDensityExclusion.nth_squarefree_not_realPatternS
+#print axioms CoreBFreeDensityExclusion.enum_not_complexPatternS
+#print axioms CoreBFreeDensityExclusion.enum_not_realPatternS
+#print axioms CoreBFreeDensityExclusion.nth_squarefree_not_complexPatternS
+#print axioms CoreBFreeDensityExclusion.nth_squarefree_not_realPatternS
+
+/-! Commands from `CoreSquareSequenceExampleAudit.lean`. -/
+#check @CoreSquareSequenceExample.squareSequence_strictMono
+#print axioms CoreSquareSequenceExample.squareSequence_strictMono
+#check @CoreSquareSequenceExample.squareSequence_gap
+#print axioms CoreSquareSequenceExample.squareSequence_gap
+#check @CoreSquareSequenceExample.squareSequence_gap_paperIndex
+#print axioms CoreSquareSequenceExample.squareSequence_gap_paperIndex
+#check @CoreSquareSequenceExample.squareGapSeries_summable
+#print axioms CoreSquareSequenceExample.squareGapSeries_summable
+#check @CoreSquareSequenceExample.squareGapSeries_eq
+#print axioms CoreSquareSequenceExample.squareGapSeries_eq
+#check @CoreSquareSequenceExample.squareGapSeries_rational
+#print axioms CoreSquareSequenceExample.squareGapSeries_rational
+
+/-! Commands from `CoreSparseBinarySeriesAudit.lean`. -/
+#check @CoreSparseBinarySeries.IsBitSequence
+#check @CoreSparseBinarySeries.oneCount
+#check @CoreSparseBinarySeries.HasZeroOneDensity
+#check @CoreSparseBinarySeries.binarySeries
+#check @CoreSparseBinarySeries.binaryTail
+#check @CoreSparseBinarySeries.binarySeries_summable
+#check @CoreSparseBinarySeries.binaryTail_summable
+#check @CoreSparseBinarySeries.binaryTail_recurrence
+#check @CoreSparseBinarySeries.exists_zeroBlock_after_of_zeroDensity
+#check @CoreSparseBinarySeries.fract_two_pow_mul_binarySeries
+#check @CoreSparseBinarySeries.binarySeries_not_isNormal_two
+#check @CoreSparseBinarySeries.binarySeries_rational_of_finite_support
+#check @CoreSparseBinarySeries.binarySeries_rational_iff_support_finite
+#check @CoreSparseBinarySeries.binarySeries_irrational_iff_support_infinite
+#print axioms CoreSparseBinarySeries.binarySeries_not_isNormal_two
+#print axioms CoreSparseBinarySeries.binarySeries_rational_iff_support_finite
+#print axioms CoreSparseBinarySeries.binarySeries_irrational_iff_support_infinite
+
+/-! Commands from `CoreTwinGapDensityAudit.lean`. -/
+#check @CoreTwinCountUpper.twinTupleProduct_le
+#check @CoreTwinCountUpper.twinPrimeStartCount_isBigO
+#check @CoreTwinGapDensity.twinGapBit
+#check @CoreTwinGapDensity.twinGap_oneCount_le_pairCount
+#check @CoreTwinGapDensity.twinGapBit_hasZeroOneDensity
+#check @CoreTwinGapDensity.twinGapBinarySeries_not_isNormal_two
+#print axioms CoreTwinCountUpper.twinTupleProduct_le
+#print axioms CoreTwinCountUpper.twinPrimeStartCount_isBigO
+#print axioms CoreTwinGapDensity.twinGapBit_hasZeroOneDensity
+#print axioms CoreTwinGapDensity.twinGapBinarySeries_not_isNormal_two
+
+/-! Commands from `CoreTwinIndicatorEndAudit.lean`. -/
+#check @CoreTwinInfinitude.twinShifts_hlAdmissible
+#check @CoreTwinInfinitude.twinShifts_singularSeries_pos
+#check @CoreTwinInfinitude.hlIntegral_two_dyadic_ge
+#check @CoreTwinInfinitude.eventually_twinRootedTupleCount_pos
+#check @CoreTwinInfinitude.infinite_twinPrimeStarts_of_kuperberg
+#check @CoreTwinIndicatorEnd.nthPrime_succ_primeCounting'_eq_add_two
+#check @CoreTwinIndicatorEnd.twinPrimeStartEquivGapOne
+#check @CoreTwinIndicatorEnd.twinGapBit_support_infinite_of_kuperberg
+#check @CoreTwinIndicatorEnd.twinGapBinarySeries_eq_literal
+#check @CoreTwinIndicatorEnd.twinGapBinarySeries_summable
+#check @CoreTwinIndicatorEnd.fract_two_pow_mul_twinGapBinarySeries
+#check @CoreTwinIndicatorEnd.twinGapBinarySeries_irrational_of_kuperberg
+#check @CoreTwinIndicatorEnd.twinGapIndicator_end_of_kuperberg
+#print axioms CoreTwinInfinitude.twinShifts_singularSeries_pos
+#print axioms CoreTwinInfinitude.infinite_twinPrimeStarts_of_kuperberg
+#print axioms CoreTwinIndicatorEnd.twinPrimeStartEquivGapOne
+#print axioms CoreTwinIndicatorEnd.twinGapBinarySeries_irrational_of_kuperberg
+#print axioms CoreTwinIndicatorEnd.twinGapIndicator_end_of_kuperberg
+
+/-! Commands from `CoreTwinIndicatorEquivalenceAudit.lean`. -/
+#check @CoreTwinIndicatorEquivalence.infinite_oneSupport_iff_infinite_twinPrimeStarts
+#print axioms CoreTwinIndicatorEquivalence.infinite_oneSupport_iff_infinite_twinPrimeStarts
+#check @CoreTwinIndicatorEquivalence.twinGapBinarySeries_irrational_iff_infinite_twinPrimeStarts
+#print axioms CoreTwinIndicatorEquivalence.twinGapBinarySeries_irrational_iff_infinite_twinPrimeStarts
+
+end PrimeGapNormality.Prime.CoreRemainingPaperExamplesAudit

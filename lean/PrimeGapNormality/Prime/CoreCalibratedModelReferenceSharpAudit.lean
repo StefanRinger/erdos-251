@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CoreCalibratedModelReferenceSharp
+
+namespace PrimeGapNormality.Prime.CoreCalibratedModelReferenceSharpAudit
+
+#check @CoreCalibratedModelReferenceSharp.exists_reference_subsequence_of_rank
+#check @CoreCalibratedModelReferenceSharp.exists_rooted_model_reference
+#check @CoreCalibratedModelReferenceSharp.exists_reference_subsequence
+
+#print axioms CoreCalibratedModelReferenceSharp.exists_reference_subsequence_of_rank
+#print axioms CoreCalibratedModelReferenceSharp.exists_rooted_model_reference
+#print axioms CoreCalibratedModelReferenceSharp.exists_reference_subsequence
+
+end PrimeGapNormality.Prime.CoreCalibratedModelReferenceSharpAudit

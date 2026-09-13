@@ -1,0 +1,22 @@
+import PrimeGapNormality.Prime.CoreRoughConsequences
+open PrimeGapNormality.Prime.CoreRoughConsequences
+#print movingRough_rational_relation_iff
+#print axioms movingRough_rational_relation_iff
+#print movingRough_jointWeyl
+#print axioms movingRough_jointWeyl
+#print movingRough_linearIndependent_one
+#print axioms movingRough_linearIndependent_one
+#print finrank_seriesSpan
+#print axioms finrank_seriesSpan
+#print movingRoughRoundedResidue_jointWeyl
+#print axioms movingRoughRoundedResidue_jointWeyl
+#print movingRoughRoundedResidue_rationalCombination_isNormal_clock
+#print axioms movingRoughRoundedResidue_rationalCombination_isNormal_clock
+#print one_movingRoughRoundedInfiniteSeries_linearIndependent
+#print axioms one_movingRoughRoundedInfiniteSeries_linearIndependent
+#print movingRough_roundedRatPolynomial_isNormal
+#print axioms movingRough_roundedRatPolynomial_isNormal
+#print rational_relation_iff_common_period
+#print axioms rational_relation_iff_common_period
+#print jointWeyl_common_period
+#print axioms jointWeyl_common_period

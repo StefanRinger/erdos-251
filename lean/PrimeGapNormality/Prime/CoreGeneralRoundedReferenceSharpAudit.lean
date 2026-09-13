@@ -1,0 +1,41 @@
+import PrimeGapNormality.Prime.CoreGeneralRoundedReferenceSharp
+
+/-! Literal sharp rounded/scaled reference types and transitive axioms.
+No build acceptance is asserted by this source audit. -/
+namespace PrimeGapNormality.Prime.CoreGeneralRoundedReferenceSharpAudit
+
+#check @CoreGeneralScaledGapModelReference.modelMean
+#print CoreGeneralScaledGapModelReference.modelMean
+#check @CoreGeneralScaledGapST.orbit
+#print CoreGeneralScaledGapST.orbit
+#check @CoreRoundedReferenceMeasure.referenceMeasure
+#print CoreRoundedReferenceMeasure.referenceMeasure
+
+#check @CoreGeneralScaledGapModelReferenceSharp.single_cutoff_bound
+#print axioms CoreGeneralScaledGapModelReferenceSharp.single_cutoff_bound
+
+#check @CoreGeneralScaledGapModelReferenceSharp.eventually_mixture
+#print axioms CoreGeneralScaledGapModelReferenceSharp.eventually_mixture
+
+#check @CoreGeneralScaledGapModelReferenceSharp.exists_reference_subsequence
+#print axioms CoreGeneralScaledGapModelReferenceSharp.exists_reference_subsequence
+
+#check @CoreGeneralRoundedReferenceSharp.exists_fullWindow_reference
+#print axioms CoreGeneralRoundedReferenceSharp.exists_fullWindow_reference
+
+#check @CoreGeneralRoundedReferenceSharp.exists_reference_for_residue_limits
+#print axioms CoreGeneralRoundedReferenceSharp.exists_reference_for_residue_limits
+
+#check @CoreGeneralRoundedReferenceSharp.residue_limit_le_reference
+#print axioms CoreGeneralRoundedReferenceSharp.residue_limit_le_reference
+
+#check @CoreGeneralRoundedReferenceSharp.residue_limit_le_of_complexPatternS
+#print axioms CoreGeneralRoundedReferenceSharp.residue_limit_le_of_complexPatternS
+
+#check @CoreGeneralRoundedReferenceSharp.residue_limit_le_of_realPositive
+#print axioms CoreGeneralRoundedReferenceSharp.residue_limit_le_of_realPositive
+
+#check @CoreGeneralRoundedReferenceSharp.rounded_residue_limit_le_reference
+#print axioms CoreGeneralRoundedReferenceSharp.rounded_residue_limit_le_reference
+
+end PrimeGapNormality.Prime.CoreGeneralRoundedReferenceSharpAudit

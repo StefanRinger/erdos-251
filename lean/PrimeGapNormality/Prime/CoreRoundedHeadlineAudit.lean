@@ -1,0 +1,20 @@
+import PrimeGapNormality.Prime.CoreRoundedHeadline
+
+/-! Source-only audit surface for the literal September 10 rounded headline. -/
+
+open PrimeGapNormality.Prime
+
+#check CoreRoundedHeadline.Exponent
+#check CoreRoundedHeadline.Z
+#check @CoreRoundedHeadline.Z_eq_roundedResidueSeries
+#print axioms CoreRoundedHeadline.Z_eq_roundedResidueSeries
+#check @CoreRoundedHeadline.Z_eq_roundedInfiniteSeries
+#print axioms CoreRoundedHeadline.Z_eq_roundedInfiniteSeries
+#check @CoreRoundedHeadline.one_Z_linearIndependent_of_kuperberg
+#print axioms CoreRoundedHeadline.one_Z_linearIndependent_of_kuperberg
+#check @CoreRoundedHeadline.Z_isNormal_of_kuperberg
+#print axioms CoreRoundedHeadline.Z_isNormal_of_kuperberg
+#check @CoreRoundedHeadline.finite_Z_jointWeyl_of_kuperberg
+#print axioms CoreRoundedHeadline.finite_Z_jointWeyl_of_kuperberg
+#check @CoreRoundedHeadline.finite_Z_empirical_tendsto_of_kuperberg
+#print axioms CoreRoundedHeadline.finite_Z_empirical_tendsto_of_kuperberg

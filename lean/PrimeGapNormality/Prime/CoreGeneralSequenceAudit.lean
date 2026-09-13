@@ -1,0 +1,114 @@
+import PrimeGapNormality.Prime.CoreGeneralSequenceST
+import PrimeGapNormality.Prime.CoreGeneralSequenceClassification
+import PrimeGapNormality.Prime.CoreGeneralRealCutoff
+import PrimeGapNormality.Prime.CoreGeneralSequenceRelations
+import PrimeGapNormality.Prime.CoreGeneralSequenceDimension
+import PrimeGapNormality.Prime.CoreGeneralPeriodicPosition
+import PrimeGapNormality.Prime.CoreGeneralPositionComponents
+import PrimeGapNormality.Prime.CoreGeneralPositiveDensityExclusion
+
+/-!
+# General calibrated-sequence audit
+
+Public end types and transitive axiom checks for the non-rounded general S/T
+scope: natural and real cutoffs, classification, relations, dimension,
+periodic positions, position components, and positive-density exclusion.
+Source-only until centrally compiled and inspected.
+-/
+
+/-! ## Literal S/T and calibration data -/
+
+#print PrimeGapNormality.Prime.CoreCalibratedMixtureFiniteSupport.UniformCalibration
+#print PrimeGapNormality.Prime.CoreSequenceSTMeanTail.MeanGapTailT
+#print PrimeGapNormality.Prime.CoreGeneralSequenceST.span
+#print PrimeGapNormality.Prime.CoreGeneralSequenceST.model
+#print PrimeGapNormality.Prime.CoreGeneralSequenceST.ShapeS
+#print PrimeGapNormality.Prime.CoreGeneralSequenceST.PatternS
+#print PrimeGapNormality.Prime.CoreGeneralSequenceST.ComplexPatternS
+#print PrimeGapNormality.Prime.CoreGeneralRealCutoff.weights
+#print PrimeGapNormality.Prime.CoreGeneralRealCutoff.Calibration
+#print PrimeGapNormality.Prime.CoreGeneralRealCutoff.PatternS
+#print PrimeGapNormality.Prime.CoreGeneralPeriodicPosition.positionSeries
+#print PrimeGapNormality.Prime.CoreGeneralPositionComponents.component
+
+/-! ## Natural-cutoff S/T and effective-degree classification -/
+
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceST.patternS_of_complex
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceST.patternS_of_complex
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceST.shapeS_of_patternS
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceST.shapeS_of_patternS
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceST.windowCountToInfinity
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceST.windowCountToInfinity
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceST.gapTailT
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceST.gapTailT
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceST.fullSeries_isNormal_of_complexPatternS
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceST.fullSeries_isNormal_of_complexPatternS
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceClassification.local_rational_iff_normalForm_zero
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceClassification.local_rational_iff_normalForm_zero
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceClassification.local_classification
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceClassification.local_classification
+
+/-! ## Arbitrary real-cutoff adapter and classification -/
+
+#check @PrimeGapNormality.Prime.CoreCalibratedRealCutoff.cutoffPMF_toMeasure
+#print axioms PrimeGapNormality.Prime.CoreCalibratedRealCutoff.cutoffPMF_toMeasure
+#check @PrimeGapNormality.Prime.CoreCalibratedRealCutoff.lintegral_floor_eq_tsum
+#print axioms PrimeGapNormality.Prime.CoreCalibratedRealCutoff.lintegral_floor_eq_tsum
+#check @PrimeGapNormality.Prime.CoreCalibratedRealCutoff.exists_finite_floor_representation
+#print axioms PrimeGapNormality.Prime.CoreCalibratedRealCutoff.exists_finite_floor_representation
+#check @PrimeGapNormality.Prime.CoreCalibratedRealCutoff.uniformCalibration_of_ae
+#print axioms PrimeGapNormality.Prime.CoreCalibratedRealCutoff.uniformCalibration_of_ae
+#check @PrimeGapNormality.Prime.CoreGeneralRealCutoff.modelExpectation_eq
+#print axioms PrimeGapNormality.Prime.CoreGeneralRealCutoff.modelExpectation_eq
+#check @PrimeGapNormality.Prime.CoreGeneralRealCutoff.patternS_nat
+#print axioms PrimeGapNormality.Prime.CoreGeneralRealCutoff.patternS_nat
+#check @PrimeGapNormality.Prime.CoreGeneralRealCutoff.local_classification
+#print axioms PrimeGapNormality.Prime.CoreGeneralRealCutoff.local_classification
+
+/-! ## Rational relations, common periods, and joint laws -/
+
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.fullSeries_sum_smul
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.fullSeries_sum_smul
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.combination_weyl
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.combination_weyl
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.rational_relation_iff
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.rational_relation_iff
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.jointWeyl_of_independent_normalForms
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.jointWeyl_of_independent_normalForms
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.one_linearIndependent
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.one_linearIndependent
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.joint_empirical_tendsto
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.joint_empirical_tendsto
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.jointWeyl_common_period
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.jointWeyl_common_period
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceRelations.rational_relation_iff_common_period
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceRelations.rational_relation_iff_common_period
+
+/-! ## Exact series-space dimension -/
+
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceDimension.finrank_seriesSpan
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceDimension.finrank_seriesSpan
+#check @PrimeGapNormality.Prime.CoreGeneralSequenceDimension.finrank_seriesSpan_realCutoff
+#print axioms PrimeGapNormality.Prime.CoreGeneralSequenceDimension.finrank_seriesSpan_realCutoff
+
+/-! ## Periodic position series and residue components -/
+
+#check @PrimeGapNormality.Prime.CoreGeneralPeriodicPosition.positionSeries_normal
+#print axioms PrimeGapNormality.Prime.CoreGeneralPeriodicPosition.positionSeries_normal
+#check @PrimeGapNormality.Prime.CoreGeneralPeriodicPosition.positionSeries_normal_realCutoff
+#print axioms PrimeGapNormality.Prime.CoreGeneralPeriodicPosition.positionSeries_normal_realCutoff
+#check @PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_jointWeyl
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_jointWeyl
+#check @PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_one_linearIndependent
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_one_linearIndependent
+#check @PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_empirical_tendsto
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_empirical_tendsto
+#check @PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_jointWeyl_realCutoff
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositionComponents.components_jointWeyl_realCutoff
+
+/-! ## Positive-density exclusion -/
+
+#check @PrimeGapNormality.Prime.CoreGeneralPositiveDensityExclusion.exists_bounded_gap_test
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositiveDensityExclusion.exists_bounded_gap_test
+#check @PrimeGapNormality.Prime.CoreGeneralPositiveDensityExclusion.not_complexPatternS_of_positive_density
+#print axioms PrimeGapNormality.Prime.CoreGeneralPositiveDensityExclusion.not_complexPatternS_of_positive_density

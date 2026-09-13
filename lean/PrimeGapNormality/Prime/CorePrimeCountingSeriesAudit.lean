@@ -1,0 +1,22 @@
+import PrimeGapNormality.Prime.CorePrimeCountingSeries
+
+open PrimeGapNormality.Prime
+
+#check primeCounting_eq_on_primeBlock
+#check sum_primeCountingTerm_primeBlock
+#check sum_primeCountingTerm_Ico_nthPrime
+#check primeCountingSeries_summable
+#check primeCountingSeries_zpow_summable
+#check primeCountingSeries_eq_one_add_gap
+#check tsum_primeCounting_recip_eq_primePosSeries_sub_one
+#check tsum_primeCounting_zpow_eq_primePosSeries_sub_one
+#check primeCountingSeries_fract_eq
+
+#print axioms sum_primeCountingTerm_primeBlock
+#print axioms sum_primeCountingTerm_Ico_nthPrime
+#print axioms primeCountingSeries_summable
+#print axioms primeCountingSeries_zpow_summable
+#print axioms primeCountingSeries_eq_one_add_gap
+#print axioms tsum_primeCounting_recip_eq_primePosSeries_sub_one
+#print axioms tsum_primeCounting_zpow_eq_primePosSeries_sub_one
+#print axioms primeCountingSeries_fract_eq

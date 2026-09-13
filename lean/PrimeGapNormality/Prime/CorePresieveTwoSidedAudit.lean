@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CorePresieveTwoSided
+open PrimeGapNormality.Prime.CorePresieveTwoSided
+#print twoSidedMass
+#print middle_mean_upper
+#print eventually_middle_mean_abs_sub_any
+#print eventually_twoSidedMass_le_log_sq
+#print eventually_paper_twoSidedMass_le
+#print tendsto_twoSidedMass_zero
+#print axioms middle_mean_upper
+#print axioms eventually_middle_mean_abs_sub_any
+#print axioms eventually_twoSidedMass_le_log_sq
+#print axioms eventually_paper_twoSidedMass_le
+#print axioms tendsto_twoSidedMass_zero

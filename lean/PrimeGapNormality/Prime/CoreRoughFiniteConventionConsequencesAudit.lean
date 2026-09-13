@@ -1,0 +1,11 @@
+import PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences
+
+/-! Audit surface for the product-Haar and dimension consequences. -/
+
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.joint_empirical_tendsto
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.joint_continuous_integral_tendsto
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.finrank_seriesSpan
+
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.joint_empirical_tendsto
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.joint_continuous_integral_tendsto
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionConsequences.finrank_seriesSpan

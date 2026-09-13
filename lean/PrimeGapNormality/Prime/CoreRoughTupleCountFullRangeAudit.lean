@@ -1,0 +1,41 @@
+import PrimeGapNormality.Prime.CoreRoughIntegerTupleCount
+
+/-! Public-domain audit: small cutoffs, real cutoffs and signed integer intervals.
+The imports are proof modules, not other audit leaves. -/
+namespace PrimeGapNormality.Prime
+
+#check @CoreRoughTupleCountFullRange.avoidedInterval_error_le_primorial
+#check @CoreRoughTupleCountFullRange.level_le_additive
+#check @CoreRoughTupleCountFullRange.avoidedInterval_error_half
+#check @CoreRoughTupleCountFullRange.translatedRoughInterval_error_half
+#check @CoreRoughTupleCountFullRange.avoidedInterval_error_realCutoff
+#check @CoreRoughIntegerTupleCount.normalizedShifts_card
+#check @CoreRoughIntegerTupleCount.residueCount_normalizedShifts
+#check @CoreRoughIntegerTupleCount.tupleProduct_normalizedShifts
+#check @CoreRoughIntegerTupleCount.translated_divisibility
+#check @CoreRoughIntegerTupleCount.integerAvoidedInterval_card_eq
+#check @CoreRoughIntegerTupleCount.integerAvoidedInterval_error
+#check @CoreRoughIntegerTupleCount.integerAvoidedInterval_error_realCutoff
+#check @CoreRoughIntegerTupleCount.count_and_product_zero_of_local_full
+
+#print CoreRoughIntegerTupleCount.integerAvoids
+#print CoreRoughIntegerTupleCount.integerAvoidedInterval
+#print CoreRoughIntegerTupleCount.integerAvoidedIntervalReal
+#print CoreRoughIntegerTupleCount.integerResidueCount
+#print CoreRoughIntegerTupleCount.integerTupleSieveProduct
+
+#print axioms CoreRoughTupleCountFullRange.avoidedInterval_error_le_primorial
+#print axioms CoreRoughTupleCountFullRange.level_le_additive
+#print axioms CoreRoughTupleCountFullRange.avoidedInterval_error_half
+#print axioms CoreRoughTupleCountFullRange.translatedRoughInterval_error_half
+#print axioms CoreRoughTupleCountFullRange.avoidedInterval_error_realCutoff
+#print axioms CoreRoughIntegerTupleCount.normalizedShifts_card
+#print axioms CoreRoughIntegerTupleCount.residueCount_normalizedShifts
+#print axioms CoreRoughIntegerTupleCount.tupleProduct_normalizedShifts
+#print axioms CoreRoughIntegerTupleCount.translated_divisibility
+#print axioms CoreRoughIntegerTupleCount.integerAvoidedInterval_card_eq
+#print axioms CoreRoughIntegerTupleCount.integerAvoidedInterval_error
+#print axioms CoreRoughIntegerTupleCount.integerAvoidedInterval_error_realCutoff
+#print axioms CoreRoughIntegerTupleCount.count_and_product_zero_of_local_full
+
+end PrimeGapNormality.Prime

@@ -1,0 +1,23 @@
+import PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions
+
+/-! Full public types and transitive axiom checks; no proof-term dumps. -/
+
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.meanGapTailT_any_rho
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.gapTailT_any_rho
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.position_summable
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.localSeries_summable
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.fullSeries_sum_smul
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.rational_relation_iff
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.combination_weyl
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.jointWeyl
+#check @PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.linearIndependent_one
+
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.meanGapTailT_any_rho
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.gapTailT_any_rho
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.position_summable
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.localSeries_summable
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.fullSeries_sum_smul
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.rational_relation_iff
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.combination_weyl
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.jointWeyl
+#print axioms PrimeGapNormality.Prime.CoreRoughFiniteConventionExtensions.linearIndependent_one

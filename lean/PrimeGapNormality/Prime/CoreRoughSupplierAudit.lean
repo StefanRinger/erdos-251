@@ -1,0 +1,29 @@
+import PrimeGapNormality.Prime.CoreRoughAdverseLimit
+import PrimeGapNormality.Prime.CoreRoughInitialCount
+import PrimeGapNormality.Prime.CoreMovingRoughPolynomialGrowth
+
+/-!
+# Actual rough arithmetic supplier audit
+
+These are supplier endpoints, not yet the all-paper rough normality
+acceptance. The actual first-gap tail, the every-permitted-window variant,
+and the final digit/series assembly must be checked separately.
+-/
+
+#check @PrimeGapNormality.Prime.CoreRoughDyadicDensity.tendsto_rawPhysicalRoots_div_main_one
+#check @PrimeGapNormality.Prime.CoreRoughPhysicalSlices.tendsto_empirical_total_one
+#check @PrimeGapNormality.Prime.CoreRoughCellErrorLimit.eventually_cell_tuple_error_uniform
+#check @PrimeGapNormality.Prime.CoreRoughCellErrorLimit.tendsto_uniformCellRelativeError_weighted_zero
+#check @PrimeGapNormality.Prime.CoreRoughSliceAdditiveBudget.tendsto_layeredCost_zero
+#check @PrimeGapNormality.Prime.CoreRoughAdverseLimit.sequencePositiveShapeS
+#check @PrimeGapNormality.Prime.CoreRoughInitialCount.tendsto_initialCountNormalized_one
+#check @PrimeGapNormality.Prime.CoreMovingRoughPolynomialGrowth.exists_global_quadratic_bound
+
+#print axioms PrimeGapNormality.Prime.CoreRoughDyadicDensity.tendsto_rawPhysicalRoots_div_main_one
+#print axioms PrimeGapNormality.Prime.CoreRoughPhysicalSlices.tendsto_empirical_total_one
+#print axioms PrimeGapNormality.Prime.CoreRoughCellErrorLimit.eventually_cell_tuple_error_uniform
+#print axioms PrimeGapNormality.Prime.CoreRoughCellErrorLimit.tendsto_uniformCellRelativeError_weighted_zero
+#print axioms PrimeGapNormality.Prime.CoreRoughSliceAdditiveBudget.tendsto_layeredCost_zero
+#print axioms PrimeGapNormality.Prime.CoreRoughAdverseLimit.sequencePositiveShapeS
+#print axioms PrimeGapNormality.Prime.CoreRoughInitialCount.tendsto_initialCountNormalized_one
+#print axioms PrimeGapNormality.Prime.CoreMovingRoughPolynomialGrowth.exists_global_quadratic_bound

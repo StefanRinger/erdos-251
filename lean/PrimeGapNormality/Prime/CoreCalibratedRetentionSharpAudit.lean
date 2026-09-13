@@ -1,0 +1,13 @@
+import PrimeGapNormality.Prime.CoreCalibratedRetentionSharp
+
+namespace PrimeGapNormality.Prime.CoreCalibratedRetentionSharpAudit
+
+#check @CoreCalibratedRetentionSharp.tendsto_log_physicalSpan_div_log
+#check @CoreCalibratedRetentionSharp.eventually_scaled_retention_lt_two
+#check @CoreCalibratedRetentionSharp.eventually_insertion_prefactor_lt_twenty_four
+
+#print axioms CoreCalibratedRetentionSharp.tendsto_log_physicalSpan_div_log
+#print axioms CoreCalibratedRetentionSharp.eventually_scaled_retention_lt_two
+#print axioms CoreCalibratedRetentionSharp.eventually_insertion_prefactor_lt_twenty_four
+
+end PrimeGapNormality.Prime.CoreCalibratedRetentionSharpAudit

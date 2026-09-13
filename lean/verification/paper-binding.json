@@ -1,0 +1,9 @@
+{
+  "status": "PASS: complete renamed-source build and all 416 requested axiom checks",
+  "evidence": "completed/build-and-axioms.json",
+  "sha256": {
+    "prime_gap_normality.tex": "498d809b6a9806588c64b5ea006f4d9a47a3ca6dfe0ffc298dd3074af3c98e1e",
+    "prime_gap_normality.pdf": "22332707548c833b691a20e9d7e03a548478f49ac85cb5a54a18ba5ec1b5c989"
+  },
+  "source_count": 629
+}

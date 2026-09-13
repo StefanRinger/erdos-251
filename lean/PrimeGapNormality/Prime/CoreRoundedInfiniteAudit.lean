@@ -1,0 +1,15 @@
+import PrimeGapNormality.Prime.CoreRoundedInfiniteFamily
+
+/-! Audit of the uncountable rounded exponent family. -/
+
+namespace PrimeGapNormality.Prime.CoreRoundedInfiniteAudit
+
+#check @CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_D
+#check @CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_AHL
+#check @CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_kuperberg
+
+#print axioms CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_D
+#print axioms CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_AHL
+#print axioms CoreRoundedInfiniteFamily.one_roundedInfiniteSeries_linearIndependent_of_kuperberg
+
+end PrimeGapNormality.Prime.CoreRoundedInfiniteAudit

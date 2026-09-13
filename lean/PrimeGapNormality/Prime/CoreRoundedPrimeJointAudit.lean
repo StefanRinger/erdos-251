@@ -1,0 +1,19 @@
+import PrimeGapNormality.Prime.CoreRoundedPrimeJointEnd
+
+/-! Source-only audit surface for the finite rounded prime-family joint laws. -/
+
+open PrimeGapNormality.Prime
+
+#check @CoreRoundedPrimeJointEnd.empirical_tendsto_of_D
+#print axioms CoreRoundedPrimeJointEnd.empirical_tendsto_of_D
+#check @CoreRoundedPrimeJointEnd.continuous_test_tendsto_of_D
+#print axioms CoreRoundedPrimeJointEnd.continuous_test_tendsto_of_D
+#check @CoreRoundedPrimeJointEnd.box_frequency_of_D
+#print axioms CoreRoundedPrimeJointEnd.box_frequency_of_D
+
+#check @CoreRoundedPrimeJointEnd.empirical_tendsto_of_kuperberg
+#print axioms CoreRoundedPrimeJointEnd.empirical_tendsto_of_kuperberg
+#check @CoreRoundedPrimeJointEnd.continuous_test_tendsto_of_kuperberg
+#print axioms CoreRoundedPrimeJointEnd.continuous_test_tendsto_of_kuperberg
+#check @CoreRoundedPrimeJointEnd.box_frequency_of_kuperberg
+#print axioms CoreRoundedPrimeJointEnd.box_frequency_of_kuperberg

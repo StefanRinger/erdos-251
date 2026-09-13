@@ -1,0 +1,100 @@
+import PrimeGapNormality.Prime.CoreGeneralPositiveDimension
+import PrimeGapNormality.Prime.CoreGeneralPositivePosition
+
+/-! Full type/axiom audit of the positive arbitrary-mixture nonrounded
+classification and its consequences. This source is not a build record. -/
+namespace PrimeGapNormality.Prime.CoreGeneralPositiveAudit
+
+#check @CoreGeneralSequenceST.ShapeS
+#print CoreGeneralSequenceST.ShapeS
+#check @CoreGeneralRoundedPositive.RealShapeS
+#print CoreGeneralRoundedPositive.RealShapeS
+#check @CoreSequenceSTDimension.seriesSpan
+#print CoreSequenceSTDimension.seriesSpan
+#check @CoreGeneralPeriodicPosition.positionSeries
+#print CoreGeneralPeriodicPosition.positionSeries
+#check @CoreGeneralPositionComponents.component
+#print CoreGeneralPositionComponents.component
+
+#check @CoreGeneralPositiveClassification.gap_growth
+#print axioms CoreGeneralPositiveClassification.gap_growth
+
+#check @CoreGeneralPositiveClassification.fullSeries_eq_normalForm_add_boundary
+#print axioms CoreGeneralPositiveClassification.fullSeries_eq_normalForm_add_boundary
+
+#check @CoreGeneralPositiveClassification.rooted_rational_weyl
+#print axioms CoreGeneralPositiveClassification.rooted_rational_weyl
+
+#check @CoreGeneralPositiveClassification.local_weyl
+#print axioms CoreGeneralPositiveClassification.local_weyl
+
+#check @CoreGeneralPositiveClassification.local_rational_iff_normalForm_zero
+#print axioms CoreGeneralPositiveClassification.local_rational_iff_normalForm_zero
+
+#check @CoreGeneralPositiveClassification.local_classification
+#print axioms CoreGeneralPositiveClassification.local_classification
+
+#check @CoreGeneralPositiveClassification.local_classification_realCutoff
+#print axioms CoreGeneralPositiveClassification.local_classification_realCutoff
+
+#check @CoreGeneralPositiveRelations.fullSeries_sum_smul
+#print axioms CoreGeneralPositiveRelations.fullSeries_sum_smul
+
+#check @CoreGeneralPositiveRelations.combination_weyl
+#print axioms CoreGeneralPositiveRelations.combination_weyl
+
+#check @CoreGeneralPositiveRelations.rational_relation_iff
+#print axioms CoreGeneralPositiveRelations.rational_relation_iff
+
+#check @CoreGeneralPositiveRelations.jointWeyl_of_independent_normalForms
+#print axioms CoreGeneralPositiveRelations.jointWeyl_of_independent_normalForms
+
+#check @CoreGeneralPositiveRelations.one_linearIndependent
+#print axioms CoreGeneralPositiveRelations.one_linearIndependent
+
+#check @CoreGeneralPositiveRelations.joint_empirical_tendsto
+#print axioms CoreGeneralPositiveRelations.joint_empirical_tendsto
+
+#check @CoreGeneralPositiveRelations.jointWeyl_common_period
+#print axioms CoreGeneralPositiveRelations.jointWeyl_common_period
+
+#check @CoreGeneralPositiveRelations.rational_relation_iff_common_period
+#print axioms CoreGeneralPositiveRelations.rational_relation_iff_common_period
+
+#check @CoreGeneralPositiveRelations.jointWeyl_realCutoff
+#print axioms CoreGeneralPositiveRelations.jointWeyl_realCutoff
+
+#check @CoreGeneralPositiveRelations.rational_relation_iff_realCutoff
+#print axioms CoreGeneralPositiveRelations.rational_relation_iff_realCutoff
+
+#check @CoreGeneralPositiveDimension.evaluation_injective
+#print axioms CoreGeneralPositiveDimension.evaluation_injective
+
+#check @CoreGeneralPositiveDimension.finrank_seriesSpan
+#print axioms CoreGeneralPositiveDimension.finrank_seriesSpan
+
+#check @CoreGeneralPositiveDimension.finrank_seriesSpan_realCutoff
+#print axioms CoreGeneralPositiveDimension.finrank_seriesSpan_realCutoff
+
+#check @CoreGeneralPositivePosition.positionSeries_weyl
+#print axioms CoreGeneralPositivePosition.positionSeries_weyl
+
+#check @CoreGeneralPositivePosition.positionSeries_normal
+#print axioms CoreGeneralPositivePosition.positionSeries_normal
+
+#check @CoreGeneralPositivePosition.positionSeries_normal_realCutoff
+#print axioms CoreGeneralPositivePosition.positionSeries_normal_realCutoff
+
+#check @CoreGeneralPositivePosition.components_jointWeyl
+#print axioms CoreGeneralPositivePosition.components_jointWeyl
+
+#check @CoreGeneralPositivePosition.components_one_linearIndependent
+#print axioms CoreGeneralPositivePosition.components_one_linearIndependent
+
+#check @CoreGeneralPositivePosition.components_empirical_tendsto
+#print axioms CoreGeneralPositivePosition.components_empirical_tendsto
+
+#check @CoreGeneralPositivePosition.components_jointWeyl_realCutoff
+#print axioms CoreGeneralPositivePosition.components_jointWeyl_realCutoff
+
+end PrimeGapNormality.Prime.CoreGeneralPositiveAudit

@@ -1,0 +1,21 @@
+Local gap statistics, telescoping, and normality
+Copyright 2026 Stefan Ringer
+
+The original Lean code, scripts and repository documentation are licensed
+under the Apache License, Version 2.0. See LICENSE.
+
+The paper, paper/prime_gap_normality.tex and paper/prime_gap_normality.pdf,
+is licensed separately under Creative Commons Attribution 4.0
+International (CC BY 4.0). See paper/LICENSE and
+https://creativecommons.org/licenses/by/4.0/.
+
+This repository includes a local port of portions of PrimeNumberTheoremAnd,
+whose upstream citation credits Alex Kontorovich and Terence Tao.
+Upstream: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+Pinned revision: a5154676af9aa3095150ee410cdda80555aa0642
+Its Apache-2.0 license, citation and modification provenance are retained
+in lean/PrimeGapNormality/ClassicalPNT/.
+
+Lean, Mathlib and other pinned dependencies retain their upstream licenses
+and attribution. Dependency authorship does not imply authorship or
+endorsement of this paper's normality results.

@@ -1,0 +1,21 @@
+import PrimeGapNormality.Prime.CorePrimeEtaAsymptotics
+
+/-! Source-only audit surface for the strict and critical eta asymptotics. -/
+
+open PrimeGapNormality.Prime
+
+#print CorePrimeEtaAsymptotics.strictEtaExponent
+
+#check @CorePrimeEtaAsymptotics.strictEtaExponent_pos
+#print axioms CorePrimeEtaAsymptotics.strictEtaExponent_pos
+#check @CorePrimeEtaAsymptotics.eventually_strict_eta_power_bounds
+#print axioms CorePrimeEtaAsymptotics.eventually_strict_eta_power_bounds
+#check @CorePrimeEtaAsymptotics.strict_log_inv_eta_comparable
+#print axioms CorePrimeEtaAsymptotics.strict_log_inv_eta_comparable
+
+#check @CorePrimeEtaAsymptotics.eventually_critical_tail_exp_bounds
+#print axioms CorePrimeEtaAsymptotics.eventually_critical_tail_exp_bounds
+#check @CorePrimeEtaAsymptotics.eventually_critical_eta_tail_bounds
+#print axioms CorePrimeEtaAsymptotics.eventually_critical_eta_tail_bounds
+#check @CorePrimeEtaAsymptotics.critical_log_inv_eta_comparable
+#print axioms CorePrimeEtaAsymptotics.critical_log_inv_eta_comparable

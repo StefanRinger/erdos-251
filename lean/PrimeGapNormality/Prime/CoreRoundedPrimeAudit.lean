@@ -1,0 +1,38 @@
+import PrimeGapNormality.Prime.CoreRoundedPrimeNormality
+import PrimeGapNormality.Prime.CoreRoundedPrimeFamily
+
+/-!
+# Audit of the actual rounded-prime scalar endpoint
+
+The audited family uses one fixed rounding convention.  The displayed
+finite integer combination is literal, the leading column is required to
+be nonzero, and the arithmetic premise is the actual D quantity (or one of
+its proved AHL/Kuperberg suppliers).
+-/
+
+namespace PrimeGapNormality.Prime.CoreRoundedPrimeAudit
+
+#check @CoreRoundedPrimeNormality.roundedCombination_weyl_clock_of_D
+#check @CoreRoundedPrimeNormality.roundedCombination_weyl_of_D
+#check @CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_D
+#check @CoreRoundedPrimeNormality.roundedCombination_isNormal_of_D
+#check @CoreRoundedPrimeNormality.roundedCombination_irrational_of_D
+#check @CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_AHL
+#check @CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_kuperberg
+#check @CoreRoundedPrimeFamily.roundedResidue_jointWeyl_of_D
+#check @CoreRoundedPrimeFamily.roundedResidue_rationalCombination_isNormal_of_D
+#check @CoreRoundedPrimeFamily.roundedResidue_one_linearIndependent_of_D
+#check @CoreRoundedPrimeFamily.roundedResidue_jointWeyl_of_AHL
+#check @CoreRoundedPrimeFamily.roundedResidue_jointWeyl_of_kuperberg
+#check @CoreRoundedPrimeFamily.roundedResidue_one_linearIndependent_of_kuperberg
+
+#print axioms CoreRoundedPrimeNormality.roundedCombination_weyl_clock_of_D
+#print axioms CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_D
+#print axioms CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_AHL
+#print axioms CoreRoundedPrimeNormality.roundedCombination_isNormal_clock_of_kuperberg
+#print axioms CoreRoundedPrimeFamily.roundedResidue_jointWeyl_of_D
+#print axioms CoreRoundedPrimeFamily.roundedResidue_rationalCombination_isNormal_of_D
+#print axioms CoreRoundedPrimeFamily.roundedResidue_one_linearIndependent_of_D
+#print axioms CoreRoundedPrimeFamily.roundedResidue_jointWeyl_of_kuperberg
+
+end PrimeGapNormality.Prime.CoreRoundedPrimeAudit

@@ -1,0 +1,16 @@
+import PrimeGapNormality.Prime.CoreCoordinateVarianceFinite
+
+open PrimeGapNormality.Prime
+
+#check finVariance_le_quarter_of_interval
+#check piVariance_snoc
+#check piFin_bounded_diff_variance
+#check piFin_centered_square_le_quarter
+#check piCoord_centered_square_le_quarter
+#check piCoord_deviation_mass_le_quarter
+
+#print axioms finVariance_le_quarter_of_interval
+#print axioms piVariance_snoc
+#print axioms piFin_bounded_diff_variance
+#print axioms piCoord_centered_square_le_quarter
+#print axioms piCoord_deviation_mass_le_quarter
